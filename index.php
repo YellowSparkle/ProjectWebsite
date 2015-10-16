@@ -1,5 +1,6 @@
 <?php
 
-	echo "Hello World!";
+	echo "Hello World!</br>";
 	$d = 5;
+	echo $d;
 ?>
