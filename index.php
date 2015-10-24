@@ -2,6 +2,7 @@
 
 	require "HTMLGenerator.php";
 	require "Header.php";
+	require "include.php";
 	generateTitle("This is a title.");
 	generateHeader();
 	
