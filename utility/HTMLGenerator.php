@@ -11,7 +11,14 @@
 		echo "  <body>";
 	}
 	
-	// Generates HTML5 footer
+	// Adds a style to the current document.
+	function addStyle($style){
+		global $generatedStyle;
+		array_push($generatedStyle, $style);
+	}
+
+	
+	// Generates HTML5 footer and adds styles to the document
 	function generateFoot(){
 		global $generatedStyle;
 		echo " 	</body>";
@@ -22,11 +29,5 @@
 		echo "</style>";
 		echo "</html>";
 	}
-	
-	function addStyle($style){
-		global $generatedStyle;
-		array_push($generatedStyle, $style);
-	}
-
 
 ?>
