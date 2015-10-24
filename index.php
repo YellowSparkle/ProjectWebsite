@@ -1,6 +1,12 @@
 <?php
 
-	echo "Hello World!</br>";
-	$d = 5;
-	echo $d;
+	require "HTMLGenerator.php";
+	require "Header.php";
+	generateTitle("This is a title.");
+	generateHeader();
+	
+	echo "TEST";
+	echo "TESTJoost";
+	
+	generateFoot();
 ?>
