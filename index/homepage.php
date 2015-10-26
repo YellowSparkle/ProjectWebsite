@@ -2,30 +2,10 @@
 
 	<head>
 		<title>Homepage</title>
+		
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	</head>
 
-<style>
-div.centerbox {   /*center login*/
-  position: absolute;   
-  top: 50%;
-  left: 50%;   
-  transform: translate(-50%, -50%) 
-}    
-
-div.plaatje1 {   /*plaatje rechts*/
-  position: absolute;   
-  top: 50%;
-  left: 75%;   
-  transform: translate(-50%, -50%) 
-}
-
-div.plaatje2 {   /*plaatje links*/
-  position: absolute;   
-  top: 50%;
-  left: 25%;   
-  transform: translate(-50%, -50%) 
-}
-</style>
 
 <body>
 
