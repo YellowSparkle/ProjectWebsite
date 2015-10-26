@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <head>
+	<title>Order Complete</title>
 	<meta http-equiv="refresh" content="5;url=../index/homepage.php" />
 </head>
 
