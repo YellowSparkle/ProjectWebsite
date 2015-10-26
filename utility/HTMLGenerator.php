@@ -1,10 +1,13 @@
 <?php
 	$generatedStyle = array();
 	// Generates HTML5 head.
-	function generateTitle($titleName){
+	function generateTitle($titleName, $redirect=false){
 		echo "<!DOCTYPE html>";
 		echo "<html>";
 		echo "  <head>";
+		if ($redirect){
+			echo "<meta http-equiv='refresh' content='5; url=$redirect' />";
+		}
 		echo "    <meta charset='UTF-8'>";
 		echo "	    <title>$titleName</title>";
 		echo "  </head>";
