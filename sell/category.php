@@ -3,6 +3,7 @@
 	require_once "../utility/Header.php";
 	generateTitle("Sell your device");
 	generateHeader();
+	// This is a comment
 ?>
 
 <div id="groupBox">
