@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-	<meta http-equiv="refresh" content="5;url=http://www.Google.com" />
+	<meta http-equiv="refresh" content="5;url=../index/homepage.php" />
 </head>
 
 <body>
@@ -10,7 +10,7 @@
 	
 	
 		If the browser does not redirect you automaticly after 5 seconds,<br /> 
-		then click <A HREF="http://www.Google.com">here</A> to return to the home page.
+		then click <A HREF="../index/homepage.php">here</A> to return to the home page.
 	</center>
 </body>
 

@@ -10,7 +10,7 @@ if(isset($_POST["submit"]))
 	{
 		$username = isset($_POST["username"]) ? $_POST["username"] : "Default";
 		$password = isset($_POST["password"]) ? $_POST["password"] : "Default";
-		echo"";?> <meta http-equiv="refresh" content="0;url=http://www.Google.com" /><?php 
+		echo"";?> <meta http-equiv="refresh" content="0;url=payment_complete.php" /><?php 
 	}
 else 
 	{
