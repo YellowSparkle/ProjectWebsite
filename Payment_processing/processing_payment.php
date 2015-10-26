@@ -4,6 +4,7 @@
 		<title>processing</title>
 	</head>
 	<body>
+	
 <?php
 if(isset($_POST["submit"]))
 	{
@@ -14,7 +15,7 @@ if(isset($_POST["submit"]))
 	}
 else 
 	{
-	echo "Form was not succesfully submitted";
+		echo "Form was not succesfully submitted";
 	}
  ?>
 	</body>
