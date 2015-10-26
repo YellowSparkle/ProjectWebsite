@@ -27,7 +27,7 @@
             <input type="checkbox" name="remember_me" id="remember_me">
             Stay logged in.
           </label></br>
-          <label><a href="../Register_page.html"><font size="2">Don't have an account yet ? Register here!</font></a></label>
+          <label><a href="../Registreren_pagina/Register_page.html"><font size="2">Don't have an account yet ? Register here!</font></a></label>
         </p>
         <p class="submit"><input type="submit" name="commit" value="Login"></p>
       </form>

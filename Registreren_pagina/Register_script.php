@@ -1,5 +1,7 @@
 <?php
 
+include '../include.php';
+
 	/*$last_name_err = $adress_err = $zip_err = $city_err = $email_err = $password_err = $password_check_err = "";
 	$last_name = $adress = $zip = $city = $email = $password = $password_check = "";
 	
@@ -43,16 +45,7 @@
 	  } else {
 	    break;
 	  }
-	}*/	
-	
-	
-		
-	$link = mysql_connect("localhost", "root", "")
-		or die("Error connecting to server");
-	
-	mysql_select_db("testdatabase")
-		or die("Database not available");
-		
+	}*/		
 	/*if ($value_klantnummer) {
 	$result =mysql_query("SELECT customer_number FROM customer WHERE `customer_number` = '$klantnummer'");
 
@@ -67,25 +60,30 @@
 	mysql_close($db_handle);
 	}*/
 	
+		$email = trim($_POST['email']);
+		if(!filter_var($email, FILTER_VALIDATE_EMAIL)) // Als het email adres niet correct is
+	{
+		print 'Helaas, het email adres is niet correct!';
+	}
 	
-		
+	/*wachtwoord hashen*/	
 	$cost = ['cost' => 11,];
 	
     $hash = password_hash('$_POST[password]', PASSWORD_BCRYPT, $cost);
 	
 	
-	
-	$sql="INSERT INTO customers (
-		title, 
-		first_name, 
-		insertion, 
-		last_name, 
-		adress, 
-		zip, 
-		city, 
-		email, 
-		phone_number, 
-		password
+	/*gegevens posten*/
+	$sql="INSERT INTO Customer (
+		Title, 
+		First_name, 
+		Insertion, 
+		Last_name, 
+		Adress, 
+		Zip, 
+		City, 
+		Email, 
+		Tel_number, 
+		Password
 		)
 		
 		VALUES(
@@ -96,7 +94,7 @@
 		'$_POST[adress]',
 		'$_POST[zip]',
 		'$_POST[city]',
-
+		'$_POST[email]',
 		'$_POST[phone_number]',
 		'$hash'
 		)";
