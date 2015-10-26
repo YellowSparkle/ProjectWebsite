@@ -7,7 +7,7 @@
 	generateHeader();
 	
 	echo "TEST";
-	echo "TESTJoost";
+	echo "TESTIvo";
 	
 	generateFoot();
 ?>
