@@ -1,4 +1,4 @@
-/* begin plaatjes homepage */
+/* start plaatjes homepage */
 
 div.centerbox {   /*center login*/
   position: absolute;   
@@ -21,9 +21,9 @@ div.plaatje2 {   /*plaatje links*/
   transform: translate(-50%, -50%); 
 }
 
-/* eind plaatjes homepage */
+/* end plaatjes homepage */
 
-
+/* start option page */
 
 div.sell_left {   /*to sell knop*/
   position: absolute;   
@@ -40,3 +40,21 @@ div.buy_right {   /*to buy knop*/
   transform: translate(-50%, -50%) ; 
   text-align: center;
 }
+
+<<<<<<< HEAD
+/* end option page */
+=======
+
+
+/* Hier staan dingen van de details pagina van sell */
+
+div.details {
+	
+}
+
+div.selection_list{
+	
+}
+
+/* Hier stoppen de dingen van de details pagina van sell */
+>>>>>>> 305ee715d23534f870d4f68a91135fcd0551ac09
