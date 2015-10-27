@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 
+<?php 
+	require "../utility/HTMLGenerator.php";
+	require "../utility/Header.php";
+	generateTitle("Order complete");
+	generateHeader();
+?>
 <head>
 	<title>Order Complete</title>
 </head>
@@ -17,6 +23,6 @@
 						 <!-- ^^link op scherm^^ -->
 	</center>
 </body>
-
+<?php generateFoot(); ?>
 
 </html>
