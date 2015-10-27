@@ -1,4 +1,4 @@
-/* begin plaatjes homepage */
+/* start plaatjes homepage */
 
 div.centerbox {   /*center login*/
   position: absolute;   
@@ -21,9 +21,9 @@ div.plaatje2 {   /*plaatje links*/
   transform: translate(-50%, -50%); 
 }
 
-/* eind plaatjes homepage */
+/* end plaatjes homepage */
 
-
+/* start option page */
 
 div.sell_left {   /*to sell knop*/
   position: absolute;   
@@ -40,3 +40,5 @@ div.buy_right {   /*to buy knop*/
   transform: translate(-50%, -50%) ; 
   text-align: center;
 }
+
+/* end option page */
