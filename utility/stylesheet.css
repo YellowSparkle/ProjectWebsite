@@ -40,9 +40,21 @@ div.buy_right {   /*to buy knop*/
   transform: translate(-50%, -50%) ; 
   text-align: center;
 }
+/* end option page */
+
+
+div.headlogin {   /*plaatje rechts*/
+  position: absolute;   
+  top: 10%;
+  left: 85%;   
+  transform: translate(-50%, -50%);
+}
+
+
+
 
 <<<<<<< HEAD
-/* end option page */
+
 =======
 
 
