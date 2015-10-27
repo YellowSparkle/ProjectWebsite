@@ -125,10 +125,10 @@
 		if(array_key_exists($value, $_POST)){
 			if ($_POST[$value] == ""){
 				$continue = false;
-				array_push($value, $errorkeys);
+				array_push($errorkeys, $value);
 			}
 		} else {
-			array_push($value, $errorkeys);
+			array_push($errorkeys, $value);
 			$continue = false;
 		}
 	}

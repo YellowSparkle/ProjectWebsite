@@ -102,4 +102,7 @@ include '../include.php';
 	$result =- mysql_query($sql)
 		or die($sql);
 		
+	require_once '../utility/HTMLGenerator.php';
+	generateTitle('redirecting...', "../index/optionpage.php");
+		
 ?>
