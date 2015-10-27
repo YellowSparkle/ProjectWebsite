@@ -40,9 +40,21 @@ div.buy_right {   /*to buy knop*/
   transform: translate(-50%, -50%) ; 
   text-align: center;
 }
+/* end option page */
+
+
+div.headlogin {   /*plaatje rechts*/
+  position: absolute;   
+  top: 10%;
+  left: 85%;   
+  transform: translate(-50%, -50%);
+}
+
+
+
 
 <<<<<<< HEAD
-/* end option page */
+
 =======
 
 /* hier staan buy layouts*/
@@ -66,7 +78,10 @@ div.details {
 }
 
 div.selection_list{
-	
+	    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
 }
 
 /* Hier stoppen de dingen van de details pagina van sell */
