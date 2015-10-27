@@ -2,10 +2,12 @@
 	require_once "../utility/HTMLGenerator.php";
 	require_once "../utility/Header.php";
 	
+	session_start();
+	
 	generateTitle("Registration");
 	generateHeader();
 ?>
-	<form method="post" action="Register_page.php" class="tekst">
+	<form name="registerform" method="post" action="Register_page.php" class="tekst">
 	
 	<ul>
 		<li>*Title</li>
@@ -55,10 +57,10 @@
 ?>
 "></li>
 		<li>*Adress</li>
-		<li><input name="adress" type="text" size="50" value="
+		<li><input name="address" type="text" size="50" value="
 <?php
-	if (array_key_exists("adress", $_POST)){
-		echo htmlspecialchars($_POST["adress"]);
+	if (array_key_exists("address", $_POST)){
+		echo htmlspecialchars($_POST["address"]);
 	}
 ?>
 "></li>
@@ -79,7 +81,7 @@
 ?>
 "></li>
 		<li>Phone number</li>
-		<li><input name="phone_number" type="number" size="50" name="
+		<li><input name="phone_number" type="text" size="50" name="
 <?php
 	if (array_key_exists("phone_number", $_POST)){
 		echo htmlspecialchars($_POST["phone_number"]);
@@ -118,7 +120,65 @@
 	
 	</form>
 <?php
-	generateFoot();
-	$keys = array("title", "first_name");
+	$keys = array("title", "first_name", "last_name", "address", "zip", "city", "email", "password", "password_check");
+	$errorkeys = array();
+	$continue = true;
+	foreach ($keys as $value) {
+		if(array_key_exists($value, $_POST)){
+			if ($_POST[$value] == ""){
+				$continue = false;
+				array_push($errorkeys, $value);
+			}
+		} else {
+			array_push($errorkeys, $value);
+			$continue = false;
+		}
+	}
+	if ($continue){
+		echo "<script>";
+		echo "document.registerform.action='Register_script.php';";
+		echo "document.registerform.submit();";
+		echo "</script>";
+	} elseif(array_key_exists("error", $_SESSION) && $_SESSION["error"] == true) {
+		echo "<br>";
+		echo "<font color='red'>";
+		$passcheck = true;
+		foreach ($errorkeys as $value) {
+			switch($value){
+				case "title":
+					echo "* Gender selection is required.<br>";
+					break;
+				case "first_name":
+					echo "* First name is required<br>";
+					break;
+				case "last_name":
+					echo "* Last name is required<br>";
+					break;
+				case "address":
+					echo "* Address is required<br>";
+					break;
+				case "zip":
+					echo "* Zip code is required<br>";
+					break;
+				case "city":
+					echo "* City is required<br>";
+					break;
+				case "email":
+					echo "* Email is required<br>";
+					break;
+				case "password":
+				case "password_check":
+					if ($passcheck){
+						echo "* Password is required<br>";
+						$passcheck = false;
+					}
+					break;
+			}
+		}
+		echo "</font>";
+	} else {
+		$_SESSION["error"] = true;
+	}
 	
+	generateFoot();
 ?>

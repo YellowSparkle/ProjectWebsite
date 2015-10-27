@@ -1,20 +1,60 @@
+/* start plaatjes homepage */
+
 div.centerbox {   /*center login*/
   position: absolute;   
   top: 50%;
   left: 50%;   
-  transform: translate(-50%, -50%) 
+  transform: translate(-50%, -50%); 
 }    
 
 div.plaatje1 {   /*plaatje rechts*/
   position: absolute;   
   top: 50%;
   left: 75%;   
-  transform: translate(-50%, -50%) 
+  transform: translate(-50%, -50%); 
 }
 
 div.plaatje2 {   /*plaatje links*/
   position: absolute;   
   top: 50%;
   left: 25%;   
-  transform: translate(-50%, -50%) 
+  transform: translate(-50%, -50%); 
 }
+
+/* end plaatjes homepage */
+
+/* start option page */
+
+div.sell_left {   /*to sell knop*/
+  position: absolute;   
+  top: 50%;
+  left: 33%;   
+  transform: translate(-50%, -50%) ; 
+  text-align: center;
+}
+
+div.buy_right {   /*to buy knop*/
+  position: absolute;   
+  top: 50%;
+  left: 66%;   
+  transform: translate(-50%, -50%) ; 
+  text-align: center;
+}
+
+<<<<<<< HEAD
+/* end option page */
+=======
+
+
+/* Hier staan dingen van de details pagina van sell */
+
+div.details {
+	
+}
+
+div.selection_list{
+	
+}
+
+/* Hier stoppen de dingen van de details pagina van sell */
+>>>>>>> 305ee715d23534f870d4f68a91135fcd0551ac09

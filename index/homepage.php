@@ -19,7 +19,7 @@
     <div class=centerbox> <!-- begin centerbox div -->
      <div class="login"> <!-- begin login div -->
       <h1>Sign In</h1>
-      <form method="post" action="index.html">
+      <form method="post" action="../utility/Login.php">
         <p><input type="text" name="login" value="" placeholder="Email"></p>
         <p><input type="password" name="password" value="" placeholder="Password"></p>
         <p class="remember_me">
@@ -27,7 +27,7 @@
             <input type="checkbox" name="remember_me" id="remember_me">
             Stay logged in.
           </label></br>
-          <label><a href="../Registreren_pagina/Register_page.html"><font size="2">Don't have an account yet ? Register here!</font></a></label>
+          <label><a href="../Registreren_pagina/Register_page.php"><font size="2">Don't have an account yet ? Register here!</font></a></label>
         </p>
         <p class="submit"><input type="submit" name="commit" value="Login"></p>
       </form>
