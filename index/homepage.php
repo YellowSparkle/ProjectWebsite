@@ -19,7 +19,7 @@
     <div class=centerbox> <!-- begin centerbox div -->
      <div class="login"> <!-- begin login div -->
       <h1>Sign In</h1>
-      <form method="post" action="index.html">
+      <form method="post" action="../utility/Login.php">
         <p><input type="text" name="login" value="" placeholder="Email"></p>
         <p><input type="password" name="password" value="" placeholder="Password"></p>
         <p class="remember_me">
