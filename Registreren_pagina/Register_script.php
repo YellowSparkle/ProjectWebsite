@@ -67,7 +67,7 @@ include '../include.php';
 	}
 	
 	/*wachtwoord hashen*/	
-	$cost = ['cost' => 11,];
+	$cost = array('cost' => 11);
 	
     $hash = password_hash('$_POST[password]', PASSWORD_BCRYPT, $cost);
 	
