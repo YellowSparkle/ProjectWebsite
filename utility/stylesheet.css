@@ -50,7 +50,10 @@ div.details {
 }
 
 div.selection_list{
-	border: 25px solid navy;
+	    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
 }
 
 /* Hier stoppen de dingen van de details pagina van sell */
