@@ -46,8 +46,8 @@ div.buy_right {   /*to buy knop*/
 =======
 
 /* hier staan buy layouts*/
-<style type="text/css">
-	div.absolute_buy_page 
+
+	div.buy_page 
 		{
     		position: absolute;
     		top: 35%;
@@ -56,7 +56,7 @@ div.buy_right {   /*to buy knop*/
     		height: 100px;
     		border: 3px solid green;
     	}
-</style>
+
 /* eind buy layout*/
 
 /* Hier staan dingen van de details pagina van sell */
