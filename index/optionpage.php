@@ -2,6 +2,8 @@
 
 <?php
 require_once "../utility/HTMLGenerator.php";
+require_once '../utility/Header.php';
+generateHeader();
  ?>
 
 
@@ -16,11 +18,11 @@ require_once "../utility/HTMLGenerator.php";
  <div id="buttonBox2">
 		<form id="categoryButtons" class="container" action="../sell/category.php" method="get">
 			<div class=sell_left>
-				<p><img src="../img/plaatje_2.jpeg" width="256px" height="177px" alt=""></p>
-				<input class="catButton" type="submit" name="submit" value="Sell a Product">
+				<p><img src="../img/sellimage.jpg" width="400px" height="350px" alt="" border=2></p>
+				<p><input class="catButton" type="submit" name="submit" value="Sell a Product">
 			</div>
 			<div class=buy_right>
-				<p><img src="../img/plaatje_1.jpeg" width="256px" height="177px" alt=""></p>
+				<p><img src="../img/buyimage.jpg" width="400px" height="350px" alt="" border=2></p>
 				<input class="catButton" type="submit" name="submit" value="Buy a Product">
 				</div>
 		</form>

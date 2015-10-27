@@ -2,6 +2,8 @@
 	require_once "../utility/HTMLGenerator.php";
 	require_once "../utility/Header.php";
 	
+	session_start();
+	
 	generateTitle("Registration");
 	generateHeader();
 ?>
@@ -137,9 +139,10 @@
 		echo "document.registerform.action='Register_script.php';";
 		echo "document.registerform.submit();";
 		echo "</script>";
-	} else {
+	} elseif(array_key_exists("error", $_SESSION) && $_SESSION["error"] == true) {
 		echo "<br>";
 		echo "<font color='red'>";
+		$passcheck = true;
 		foreach ($errorkeys as $value) {
 			switch($value){
 				case "title":
@@ -165,11 +168,16 @@
 					break;
 				case "password":
 				case "password_check":
-					echo "* Email is required<br>";
+					if ($passcheck){
+						echo "* Password is required<br>";
+						$passcheck = false;
+					}
 					break;
 			}
 		}
 		echo "</font>";
+	} else {
+		$_SESSION["error"] = true;
 	}
 	
 	generateFoot();
