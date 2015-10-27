@@ -33,7 +33,7 @@ $query =
 	$result = mysqli_query($link, $query) or die (mysqli_error());
 	//De resultaat van de query drukt hij samen met de databaseconnectie in een variable
 	
-	//Bekijk die shit	
+	//Bekijk die shit uit de database. En drukt ze af	
 		while($row = mysqli_fetch_array($result)) {
 			 echo "<tr>";
 			  echo "<th>".$row['Product_number']."</th>";
@@ -43,7 +43,8 @@ $query =
 			  echo "<th>".$row['In_stock']."</th>";
 			  echo "<th>".$row['Catagory']."</th>";		 
 			echo "</tr>";
-	}	
+	}
+		//wie dit leest is gestoord	
 ?>
 </table>
 <br><a href=''>Terug naar vorige pagina</a>
