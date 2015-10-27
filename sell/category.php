@@ -2,7 +2,7 @@
 	require_once "../utility/HTMLGenerator.php";
 	require_once "../utility/Header.php";
 	generateTitle("Sell your device");
-	generateHeader();
+	generateHeader(false);
 	// This is a comment
 	var_dump($_POST);
 ?>
