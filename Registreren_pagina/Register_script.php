@@ -1,6 +1,8 @@
 <?php
 
 include '../include.php';
+require_once '../utility/HTMLGenerator.php';
+	generateTitle('redirecting...', "../index/optionpage.php", "1");
 
 	/*$last_name_err = $adress_err = $zip_err = $city_err = $email_err = $password_err = $password_check_err = "";
 	$last_name = $adress = $zip = $city = $email = $password = $password_check = "";
@@ -102,7 +104,6 @@ include '../include.php';
 	$result =- mysql_query($sql)
 		or die($sql);
 		
-	require_once '../utility/HTMLGenerator.php';
-	generateTitle('redirecting...', "../index/optionpage.php");
+	
 		
 ?>

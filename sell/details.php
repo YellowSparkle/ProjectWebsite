@@ -1,16 +1,25 @@
 <?php
 	require_once "../utility/HTMLGenerator.php";
 	require_once "../utility/Header.php";
+	require_once '../utility/stylesheet.css';
 	generateTitle("Sell your device");
 	generateHeader();
 	// This is a comment
 	var_dump($_POST);
 ?>
 
+<style>
+div.selection_list{
+width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;}
+</style>
+
 <div id="details">
 	
-	<div id="selection_list">
-		
+	<div id="selection_list" >
+		bhteou
 	</div>
 	
 </div>
@@ -52,7 +61,7 @@
 			<input class="catButton" type="submit" name="submit" value="Radio">
 		</form>
 	</div>
-</div>
+</div>-->
 
 <?php	
 	addStyle("#groupBox {text-align: center;vertical-align:middle;}");
@@ -60,4 +69,4 @@
 	addStyle("#buttonBox {text-align: center;}");
 	addStyle(".catButton {width:145px;}");
 	generateFoot()
-?>-->
+?>
