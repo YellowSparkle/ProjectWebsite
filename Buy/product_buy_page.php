@@ -1,4 +1,13 @@
+<?php
+   	require "../utility/HTMLGenerator.php";
+	require "../utility/Header.php";
+	generateTitle("Order complete");
+	generateHeader();
+?>
+
+
 <!DOCTYPE html>
+
 <html lang="en">
 	<head>
 		<title>Offer your product</title>
