@@ -23,17 +23,14 @@ $link = mysqli_connect("yellowsparkle.sentientturtle.me", "Joost", "Project")
 //Zie deze prachtige database connectie
 //Deze is nodig omdat er anders te veel mysql en mysqli verschillen zijn.
 //NIET VERWIJDEREN :)
-$query = 
-	"
-	SELECT * 
-	FROM Product ;
-	";
+
+$query ="	SELECT * 
+			FROM Product;	";
 	//De prachtige sql query die voor de overzicht zorgt
 
 	$result = mysqli_query($link, $query) or die (mysqli_error());
 	//De resultaat van de query drukt hij samen met de databaseconnectie in een variable
-	
-	//Bekijk die shit uit de database. En drukt ze af	
+		
 		while($row = mysqli_fetch_array($result)) {
 			 echo "<tr>";
 			  echo "<th>".$row['Product_number']."</th>";
@@ -43,7 +40,7 @@ $query =
 			  echo "<th>".$row['In_stock']."</th>";
 			  echo "<th>".$row['Catagory']."</th>";		 
 			echo "</tr>";
-	}
+	}	//Bekijk die shit uit de database. En drukt ze af	
 		//wie dit leest is gestoord	
 ?>
 </table>
