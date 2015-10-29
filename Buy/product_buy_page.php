@@ -1,7 +1,7 @@
 <?php
    	require "../utility/HTMLGenerator.php";
 	require "../utility/Header.php";
-	
+	include_once "../stylesheet.css";
 	generateTitle("Order complete");
 	generateHeader();
 	
@@ -12,32 +12,32 @@
 
 <html lang="en">
 	<head>
+		<link rel="stylesheet" type="text/css" href="../utility/stylesheet.css">
 		<title>Offer your product</title>
 		
+<!--	<style>/* hier staan buy layouts*/
+	div.basic
+		{
+		  position: absolute;   
+		  top: 50%;
+		  left: 33%; 
+		}
+	</style>
+-->
 	</head>
 
 	<body>
-		<?php require_once '../utility/stylesheet.css';?>
-<div class="buy_page">
+
+<div class="basic">
   	<ul class="checkbox">
-    <li><input type="checkbox" name="delivery" id="del1" value="in" /><label for="del1">Dine in  </label></li>
-    <li><input type="checkbox" name="delivery" id="del2" value="out" /><label for="del2">Carry out  </label></li>
-    <li><input type="checkbox" name="delivery" id="del3" value="delivery" /><label for="del3">Delivery  </label></li>
+  		Product includes a working:
+    <li><input type="checkbox" name="delivery" id="del1" value="in" /><label for="del1">Charger</label></li>
+    <li><input type="checkbox" name="delivery" id="del2" value="out" /><label for="del2">Powercable</label></li>
+    <li><input type="checkbox" name="delivery" id="del3" value="delivery" /><label for="del3">Battery</label></li>
+    <li><input type="checkbox" name="delivery" id="del1" value="in" /><label for="del4"></label>Screen</li>
   	</ul>
 </div>
-<style>/* hier staan buy layouts*/
 
-	div.buy_page 
-		{
-    		position: absolute;
-    		top: 35%;
-    		left: 20%;
-    		width: 200px;
-    		height: 100px;
-    		border: 3px solid green;
-    	}
-
-/* eind buy layout*/</style>
 	</body>
 	
 </html>
