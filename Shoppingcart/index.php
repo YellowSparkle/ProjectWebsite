@@ -91,13 +91,13 @@ if(isset($_SESSION["cart_item"])){
 <div id="product-grid">
 	<div class="txt-heading">Products</div>
 	<?php
-	$product_array = $db_handle->runQuery("SELECT * FROM Product WHERE Catagory='Telefoons';");
+	$product_array = $db_handle->runQuery("SELECT * FROM Product WHERE Catagory='Telefoons';");  //zoekt de items uit 'Catagory'
 	if (!empty($product_array)) { 
 		foreach($product_array as $key=>$value){
 	?>
 		<div class="product-item">
 			<form method="post" action="index.php?action=add&code=<?php echo $product_array[$key]["Product_number"]; ?>">
-			<div class="product-image">"<?php getImgTag($product_array[$key]["Product_number"],128); ?>"</div>
+			<div class="product-image"><?php echo getImgTag($product_array[$key]["Product_number"],128, 100); ?></div>
 			<div><strong><?php echo $product_array[$key]["Product_name"]; ?></strong></div>
 			<div class="product-price"><?php echo "$".$product_array[$key]["Price"]; ?></div>
 			<div><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" /></div>
