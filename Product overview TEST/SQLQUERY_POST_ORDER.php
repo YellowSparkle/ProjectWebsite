@@ -10,19 +10,19 @@ $klantnummer = "51";
 
 $create_query =	"	
 				CREATE TABLE IF NOT EXISTS  `Shoppingcart_$klantnummer` (
-				 			`Product_number` INT( 10 ) NOT NULL AUTO_INCREMENT ,
-							`Product_name` VARCHAR( 254 ) NOT NULL ,
+				 			`Shoppingcart_number` INT( 10 ) NOT NULL AUTO_INCREMENT ,
+							`Product_number` VARCHAR( 254 ) NOT NULL ,
 						 	`Discription` VARCHAR( 254 ) NOT NULL ,
 							`Price` VARCHAR( 254 ) NOT NULL ,
 							`In_stock` VARCHAR( 254 ) NOT NULL ,
 							`Catagory` VARCHAR( 254 ) NOT NULL ,
-							PRIMARY KEY (  `Product_number` )
+							PRIMARY KEY (  `Shoppingcart_number` )
 				)
 				";
  
 $insert_query = "
 				INSERT INTO `Shoppingcart_$klantnummer` (	
-							`Product_name`, 
+							`Product_number`, 
 							`Discription`, 
 							`Price`,
 							`In_stock`,
