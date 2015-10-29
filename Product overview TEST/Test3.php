@@ -7,27 +7,28 @@ $link = mysqli_connect("yellowsparkle.sentientturtle.me", "Joost", "Project")
 //Zie deze prachtige database connectie
 //Deze is nodig omdat er anders te veel mysql en mysqli verschillen zijn.
 //NIET VERWIJDEREN :)
-
-	require_once "../utility/HTMLGenerator.php";
-	require_once "../utility/Header.php";
-	generateTitle("Sell your device");
-	generateHeader();
 ?>
 
 <html>
-	
-<head>
-<link rel="stylesheet" type="text/css" href="../utility/stylesheet.css">	
-</head>
-
+	<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
 <body>
 <h3>Zoeken</h3>
 
 <p>
 <form name="search" method="get" action=""> 
 Zoek op: <input type="text" size="30" name="search" autocomplete="off" id="" value=""> 
-in   
- 
+in <Select NAME="field"> 
+   <Option VALUE="Product">Product</option>  
+   </Select> 
 <input type="submit" name="submit" value="Zoeken"> 
 </form>
 </p>
@@ -38,7 +39,7 @@ if (isset($_GET['submit'])) {
 		echo "<font style='color:red'>Voer een zoekopdracht in</font>";  
 	} else {
 		$search = mysqli_real_escape_string($link, $_GET['search']);
-		//$field = mysqli_real_escape_string($link, $_GET['field']);
+		$field = mysqli_real_escape_string($link, $_GET['field']);
 		
 		 //In producten zoeken
 			$query = "	SELECT * 
@@ -54,43 +55,47 @@ if (isset($_GET['submit'])) {
 			$numrows = mysqli_num_rows($result);
 
 			if ($numrows >= 1) { ?>
-				<div class="anuspenetratie">
-					
-				
+				<?php while ($row = mysqli_fetch_assoc($result)) { ?>
 				<p>
 				Gevonden resultaten:
 				</p>
-				<table id="d" style="width:100%">
-				  <tr>
+				<table id="t01" style="width:100%">
+					<tr>
+				  	<tr>
 			    <th>Productnumber</th>
+			    <td><?php echo $row['Product_number']; ?>		</td>
+			   		</tr>
+			   		<tr>
 				<th>Productname</th>
-			    <th>Description</th>		
-				<th>Price</th>
+				<td><?php echo $row['Product_name']; ?>			</td>
+					</tr>
+					<tr>		
+			    <th>Description</th>
+			    <td><?php echo $row['Description']; ?>			</td>
+			    	</tr>
+					<tr>		
+				<th>Price in euros</th>
+				<td><?php echo $row['Price']; ?>				</td>
+					</tr>
+					<tr>
 				<th>In stock</th>
+				<td><?php echo $row['In_stock']; ?>				</td>
+					</tr>
+					<tr>
 				<th>Catagory</th>
-			    </tr>
-				  
-				<?php while ($row = mysqli_fetch_assoc($result)) { ?>
-				 <tr>
-					<td id="d"><?php echo $row['Product_number']; ?>		</td>
-					<td id="d"><?php echo $row['Product_name']; ?>			</td>
-					<td id="d"><?php echo $row['Description']; ?>			</td>
-					<td id="d"><?php echo $row['Price']; ?>				</td>
-					<td id="d"><?php echo $row['In_stock']; ?>				</td>
-					<td id="d"><?php echo $row['Catagory']; ?>				</td>
-				 </tr>
-				 
-				 </div>
-				 
+				<td><?php echo $row['Catagory']; ?>				</td>
+			    	</tr>
+				 	</tr>
 				<?php
 				}
-				} else {
-				echo "Geen resultaten voor \"<b>$search</b>\"."; 
-				}	
-			}
-			}
-			?>
+			} else {
+				echo "Geen resultaten voor \"<b>$search</b>\" in <b>$field</b>."; 
+			}	
+		 
+	}
+}
+?>
 
-			</table>
+</table>
 </body>
 </html>
