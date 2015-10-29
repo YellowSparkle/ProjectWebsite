@@ -1,3 +1,12 @@
+<HTML>
+<HEAD>
+<TITLE>Simple PHP Shopping Cart</TITLE>
+<link href="style.css" type="text/css" rel="stylesheet" />
+</HEAD>
+<BODY>
+
+
+
 <?php
 
 require_once "../utility/imageprovider.php";
@@ -9,17 +18,20 @@ if(!empty($_GET["action"])) {
 switch($_GET["action"]) {
 	case "add":
 		if(!empty($_POST["quantity"])) {
-			$productByCode = $db_handle->runQuery("SELECT * FROM Product WHERE code='" . $_GET["code"] . "'");
-			$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"]));
+			$productByCode = $db_handle->runQuery("SELECT * FROM Product WHERE Product_number='" . $_GET["code"] . "'");
+			$itemArray = array($productByCode[0]["Product_number"]=>array('Product_name'=>$productByCode[0]["Product_name"], 'Product_number'=>$productByCode[0]["Product_number"], 'quantity'=>$_POST["quantity"], 'Price'=>$productByCode[0]["Price"]));
 			
 			if(!empty($_SESSION["cart_item"])) {
-				if(in_array($productByCode[0]["code"],$_SESSION["cart_item"])) {
+				if(array_key_exists($productByCode[0]["Product_number"],$_SESSION["cart_item"])) {
 					foreach($_SESSION["cart_item"] as $k => $v) {
-							if($productByCode[0]["code"] == $k)
-								$_SESSION["cart_item"][$k]["quantity"] = $_POST["quantity"];
+							if($productByCode[0]["Product_number"] == $k){
+								$_SESSION["cart_item"][$k]["quantity"] = $_POST["quantity"] + $_SESSION["cart_item"][$k]["quantity"];
+							}
 					}
 				} else {
-					$_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
+					foreach ($itemArray as $key => $value) {
+						$_SESSION["cart_item"][$key] = $value;
+					}
 				}
 			} else {
 				$_SESSION["cart_item"] = $itemArray;
@@ -42,12 +54,7 @@ switch($_GET["action"]) {
 }
 }
 ?>
-<HTML>
-<HEAD>
-<TITLE>Simple PHP Shopping Cart</TITLE>
-<link href="style.css" type="text/css" rel="stylesheet" />
-</HEAD>
-<BODY>
+
 <div id="shopping-cart">
 <div class="txt-heading">Shopping Cart <a id="btnEmpty" href="index.php?action=empty">Empty Cart</a></div>
 <?php
@@ -67,14 +74,14 @@ if(isset($_SESSION["cart_item"])){
     foreach ($_SESSION["cart_item"] as $item){
 		?>
 				<tr>
-				<td><strong><?php echo $item["name"]; ?></strong></td>
-				<td><?php echo $item["code"]; ?></td>
+				<td><strong><?php echo $item["Product_name"]; ?></strong></td>
+				<td><?php echo $item["Product_number"]; ?></td>
 				<td><?php echo $item["quantity"]; ?></td>
-				<td align=right><?php echo "$".$item["price"]; ?></td>
-				<td><a href="index.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction">Remove Item</a></td>
+				<td align=right><?php echo "$".$item["Price"]; ?></td>
+				<td><a href="index.php?action=remove&code=<?php echo $item["Product_number"]; ?>" class="btnRemoveAction">Remove Item</a></td>
 				</tr>
 				<?php
-        $item_total += ($item["price"]*$item["quantity"]);
+        $item_total += ($item["Price"]*$item["quantity"]);
 		}
 		?>
 
