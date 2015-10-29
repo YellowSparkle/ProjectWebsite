@@ -1,7 +1,7 @@
 <?php
 
-include '../include.php';
-require_once '../utility/HTMLGenerator.php';
+	include '../include.php';
+	require_once '../utility/HTMLGenerator.php';
 	generateTitle('redirecting...', "../index/optionpage.php", "1");
 
 	/*$last_name_err = $adress_err = $zip_err = $city_err = $email_err = $password_err = $password_check_err = "";
@@ -62,11 +62,7 @@ require_once '../utility/HTMLGenerator.php';
 	mysql_close($db_handle);
 	}*/
 	
-		$email = trim($_POST['email']);
-		if(!filter_var($email, FILTER_VALIDATE_EMAIL)) // Als het email adres niet correct is
-	{
-		print 'Helaas, het email adres is niet correct!';
-	}
+	$email = trim($_POST['email']);
 	
 	/*wachtwoord hashen*/	
 	$cost = array('cost' => 11);
