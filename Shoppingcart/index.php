@@ -1,4 +1,7 @@
 <?php
+
+require_once "../utility/imageprovider.php";
+
 session_start();
 require_once("dbcontroller.php");
 $db_handle = new DBController();
@@ -6,7 +9,7 @@ if(!empty($_GET["action"])) {
 switch($_GET["action"]) {
 	case "add":
 		if(!empty($_POST["quantity"])) {
-			$productByCode = $db_handle->runQuery("SELECT * FROM tblproduct WHERE code='" . $_GET["code"] . "'");
+			$productByCode = $db_handle->runQuery("SELECT * FROM Product WHERE code='" . $_GET["code"] . "'");
 			$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"]));
 			
 			if(!empty($_SESSION["cart_item"])) {
@@ -88,15 +91,15 @@ if(isset($_SESSION["cart_item"])){
 <div id="product-grid">
 	<div class="txt-heading">Products</div>
 	<?php
-	$product_array = $db_handle->runQuery("SELECT * FROM tblproduct WHERE categorie=1 ORDER BY id ASC;");
+	$product_array = $db_handle->runQuery("SELECT * FROM Product WHERE Catagory='Telefoons';");
 	if (!empty($product_array)) { 
 		foreach($product_array as $key=>$value){
 	?>
 		<div class="product-item">
-			<form method="post" action="index.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
-			<div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
-			<div><strong><?php echo $product_array[$key]["name"]; ?></strong></div>
-			<div class="product-price"><?php echo "$".$product_array[$key]["price"]; ?></div>
+			<form method="post" action="index.php?action=add&code=<?php echo $product_array[$key]["Product_number"]; ?>">
+			<div class="product-image">"<?php getImgTag($product_array[$key]["Product_number"],128); ?>"</div>
+			<div><strong><?php echo $product_array[$key]["Product_name"]; ?></strong></div>
+			<div class="product-price"><?php echo "$".$product_array[$key]["Price"]; ?></div>
 			<div><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" /></div>
 			</form>
 		</div>
