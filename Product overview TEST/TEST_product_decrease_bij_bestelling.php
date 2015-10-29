@@ -10,15 +10,17 @@ mysqli_select_db($link,"projectdb")
 	
 	
 	$product = $_POST(*VOERPRODUCTIN*);
+	$decrease_stock = $_POST(*VOERAANTALIN*);
 	
     
-    $test = "	
+    $update_stock = "	
     	UPDATE Product 
-    	SET In_stock = In_stock - 1 
-    	WHERE Product_number = $product;
+    	SET In_stock = In_stock - $decrease_stock 
+    	WHERE Product_number = $product 
+    	AND In_stock > 0;
     	";
 	
-	$testupdate = mysqli_query($link, $test) or die (mysqli_error());
+	$testupdate = mysqli_query($link, $update_stock) or die (mysqli_error());
 	
 	
 ?>
