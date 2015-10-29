@@ -1,4 +1,5 @@
 <?php
+
 	require_once '../utility/imageprovider.php';
 	// Site header
 	function generateHeader(){
@@ -6,7 +7,7 @@
 		echo getImgTag("logo", 150);
 		echo "<hr>";
 		echo "</div>";
-		// TODO: Login box
+		
 	}
 
 ?>

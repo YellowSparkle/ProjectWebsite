@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+	require_once "../utility/HTMLGenerator.php";
+	require_once "../utility/Header.php";
+	generateTitle("Sell your device");
+	generateHeader();
+?>
 
 	<head>
 		<title>Homepage</title>
