@@ -48,20 +48,32 @@
  <!-- PRICE TEXTBOX -->
  	<div class="price">
 		<fieldset width: 100%;>
-			<LEGEND><b>Prijs:</b></LEGEND>
-				Price: <input type="text" style="width:100px;"><br>
+			<LEGEND><b>Price:</b></LEGEND>
+			Price: <input type="text" style="width:108px;"><br>
 		</fieldset>
 	</div>
  <!-------------------------->
  
-  <!-- PRICE TEXTBOX -->
+  <!-- DICRIPTION TEXTBOX -->
  	<div class="beschrijving">
 		<fieldset width: 100%;>
-			<LEGEND><b>Product Beschrijving:</b></LEGEND>
+			<LEGEND><b>Product discription:</b></LEGEND>
 				<textarea name="Text1" cols="60" rows="5"></textarea>
 		</fieldset>
 	</div>
  <!-------------------------->
+ 
+ 
+  <!-- STATUS RADIO BUTTONS -->
+ 	<div class="status_product">
+		<fieldset width: 100%;>
+			<LEGEND><b>State of product:</b></LEGEND>
+				<input type="radio" name="staat" value="new" checked>New              
+  				<br>
+  				<input type="radio" name="staat" value="secondhand">secondhand
+		</fieldset>
+	</div>
+ <!--------------------------> 
 </body>
 	
 	
@@ -91,8 +103,16 @@
 		  left: 33%; 
 		  border solid 3px color: red;
 		}
+				
+	div.status_product
+		{
+		  position: absolute;   
+		  top: 66%;
+		  left: 33%; 
+		  border solid 3px color: red;
+		}
 		
-			div.beschrijving
+	div.beschrijving
 		{
 		  position: absolute;   
 		  top: 86%;
