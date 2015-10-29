@@ -37,6 +37,11 @@
         <p class="submit"><input type="submit" name="commit" value="Login"></p>
       </form>
      </div> <!-- end login div -->
+     <?php
+     	if (array_key_exists("error", $_GET)){
+     		echo "<font color='red'>Wrong username or password.</font>";
+     	}
+     ?>
     </div> <!-- end centerbox div -->
 <!--einde van login script --> 
 </body>

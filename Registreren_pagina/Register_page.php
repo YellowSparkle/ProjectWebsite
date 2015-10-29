@@ -1,7 +1,7 @@
 <?php
 	require_once "../utility/HTMLGenerator.php";
 	require_once "../utility/Header.php";
-	
+	require_once "../include.php";
 	session_start();
 	
 	generateTitle("Registration");
@@ -123,6 +123,7 @@
 	$keys = array("title", "first_name", "last_name", "address", "zip", "city", "email", "password", "password_check");
 	$errorkeys = array();
 	$continue = true;
+	
 	foreach ($keys as $value) {
 		if(array_key_exists($value, $_POST)){
 			if ($_POST[$value] == ""){
@@ -135,11 +136,18 @@
 		}
 	}
 	if ($continue){
+		if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) || 
+		!$_POST["password"] == $_POST["password_check"]){
+			$continue = false;
+		}
+	
+	}
+	if ($continue){
 		echo "<script>";
 		echo "document.registerform.action='Register_script.php';";
 		echo "document.registerform.submit();";
 		echo "</script>";
-	} elseif(array_key_exists("error", $_SESSION) && $_SESSION["error"] == true) {
+	} elseif(array_key_exists("registererror", $_SESSION) && $_SESSION["error"] == true) {
 		echo "<br>";
 		echo "<font color='red'>";
 		$passcheck = true;
@@ -177,7 +185,7 @@
 		}
 		echo "</font>";
 	} else {
-		$_SESSION["error"] = true;
+		$_SESSION["registererror"] = true;
 	}
 	
 	generateFoot();
