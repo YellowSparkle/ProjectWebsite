@@ -24,10 +24,8 @@ $link = mysqli_connect("yellowsparkle.sentientturtle.me", "Joost", "Project")
 <h3>Zoeken</h3>
 
 <p>
-<form name="search" method="get" action=""> 
+<form name="search" method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
 Zoek op: <input type="text" size="30" name="search" autocomplete="off" id="" value=""> 
-in   
- 
 <input type="submit" name="submit" value="Zoeken"> 
 </form>
 </p>
@@ -38,9 +36,9 @@ if (isset($_GET['submit'])) {
 		echo "<font style='color:red'>Voer een zoekopdracht in</font>";  
 	} else {
 		$search = mysqli_real_escape_string($link, $_GET['search']);
-		//$field = mysqli_real_escape_string($link, $_GET['field']);
+		//Zoekopdracht
 		
-		 //In producten zoeken
+		 //Met query in producten zoeken
 			$query = "	SELECT * 
 						FROM Product 
 						WHERE Product_number LIKE '%$search%' 
@@ -50,9 +48,10 @@ if (isset($_GET['submit'])) {
 						OR In_stock LIKE '%$search%' 
 						OR Catagory LIKE '%$search%' 
 						";
-			$result = mysqli_query($link, $query);
-			$numrows = mysqli_num_rows($result);
-
+			$result = mysqli_query($link, $query); //De query samen met database linken en in variable drukken
+			$numrows = mysqli_num_rows($result); 
+			//Hier heb je een werkende query met (meerdere) waarde(s) in variable gedrukt.
+		
 			if ($numrows >= 1) { ?>
 				<div class="anuspenetratie">
 					
@@ -70,12 +69,13 @@ if (isset($_GET['submit'])) {
 				<th>Catagory</th>
 			    </tr>
 				  
-				<?php while ($row = mysqli_fetch_assoc($result)) { ?>
+				<?php while ($row = mysqli_fetch_assoc($result)) {
+					 //Hier drukt hij alle gevonden rows af. Net zoals tot hij alles gehad heeft  ?>
 				 <tr>
 					<td id="d"><?php echo $row['Product_number']; ?>		</td>
 					<td id="d"><?php echo $row['Product_name']; ?>			</td>
 					<td id="d"><?php echo $row['Description']; ?>			</td>
-					<td id="d"><?php echo $row['Price']; ?>				</td>
+					<td id="d"><?php echo $row['Price']; ?>					</td>
 					<td id="d"><?php echo $row['In_stock']; ?>				</td>
 					<td id="d"><?php echo $row['Catagory']; ?>				</td>
 				 </tr>
@@ -89,6 +89,7 @@ if (isset($_GET['submit'])) {
 				}	
 			}
 			}
+	//wie dit leest is gestoord
 			?>
 
 			</table>

@@ -14,7 +14,11 @@
 	// Returns the relative path to an image.
 	function getImg($name){
 		global $imageArray;
-		return $imageArray[$name];
+		if (array_key_exists($name, $imageArray)){
+			return $imageArray[$name];
+		} else {
+			return $imageArray["noimg"];
+		}
 	}
 	
 	// Returns an HTML image tag for an image, with supplied size. (sizeY is optional and defaults to sizeX)
