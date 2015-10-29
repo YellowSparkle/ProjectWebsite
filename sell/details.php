@@ -1,7 +1,7 @@
 <?php
 	require_once "../utility/HTMLGenerator.php";
 	require_once "../utility/Header.php";
-	require_once '../utility/stylesheet.css';
+	//require_once '../utility/stylesheet.css';     << stylesheet is nog niet nodig op deze pagina, pagina is nog leeg
 	generateTitle("Sell your device");
 	generateHeader();
 	// This is a comment
