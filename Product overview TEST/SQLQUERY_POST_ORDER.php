@@ -6,10 +6,10 @@ $link = mysqli_connect("yellowsparkle.sentientturtle.me", "Joost", "Project")
 mysqli_select_db($link,"projectdb")
 		or die("Database not available");
 		
-$klantnummer = "50";
+$klantnummer = "51";
 
 $create_query =	"	
-				CREATE TABLE IF NOT EXISTS  `Shoppingcart` (
+				CREATE TABLE IF NOT EXISTS  `Shoppingcart_$klantnummer` (
 				 			`Product_number` INT( 10 ) NOT NULL AUTO_INCREMENT ,
 							`Product_name` VARCHAR( 254 ) NOT NULL ,
 						 	`Discription` VARCHAR( 254 ) NOT NULL ,
@@ -21,7 +21,7 @@ $create_query =	"
 				";
  
 $insert_query = "
-				INSERT INTO `Shoppingcart` (	
+				INSERT INTO `Shoppingcart_$klantnummer` (	
 							`Product_name`, 
 							`Discription`, 
 							`Price`,
@@ -30,15 +30,15 @@ $insert_query = "
 							) 
 				
 				VALUES		(	
-							`aoe`, 
-							`qq`, 
-							`23`,
-							`1`,
-							`axa`	
+							'aoe', 
+							'qq', 
+							'23',
+							'1',
+							'axa'	
 							);
 				";
 
 	$testupdate1 = mysqli_query($link, $create_query) or die (mysqli_error());
-	//$testupdate2 = mysqli_query($link, $insert_query) or die (mysqli_error());
+	$testupdate2 = mysqli_query($link, $insert_query) or die (mysqli_error());
 
 ?>
