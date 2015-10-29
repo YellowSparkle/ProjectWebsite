@@ -28,5 +28,7 @@
 		}
 
 	}
+	$username = "Joeri";
+	echo "Welcome {$username}"
 
 ?>

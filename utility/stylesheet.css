@@ -53,9 +53,7 @@ div.headlogin {   /*plaatje rechts*/
 
 
 
-<<<<<<< HEAD
 
-=======
 
 /* hier staan buy layouts*/
 
@@ -85,4 +83,12 @@ div.selection_list{
 }
 
 /* Hier stoppen de dingen van de details pagina van sell */
->>>>>>> 305ee715d23534f870d4f68a91135fcd0551ac09
+
+/* TEMP STUFF (IVO)
+	div.basic
+		{
+		  position: absolute;   
+		  top: 50%;
+		  left: 33%; 
+		}
+*/
