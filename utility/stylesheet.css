@@ -82,6 +82,19 @@ div.selection_list{
     margin: 0;
 }
 
+div.anuspenetratie {
+	width: 60%;
+}
+
+table.d, th, td, tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    text-align: center;
+}
+
+
 /* Hier stoppen de dingen van de details pagina van sell */
 
 /* TEMP STUFF (IVO)

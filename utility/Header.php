@@ -2,7 +2,6 @@
 
 	require_once '../utility/imageprovider.php';
 	// Site header
-	session_start();
 	function generateHeader($loginbox = true){
 		echo "<div id='header'>";
 		echo getImgTag("logo", 150);
