@@ -8,7 +8,5 @@
 	
 	echo "TEST";
 	echo "TESTIvo";
-	echo "TEST IVO DESKTOP";
-    echo "TEST 2";
 	generateFoot();
 ?>
