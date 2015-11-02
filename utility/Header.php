@@ -24,7 +24,7 @@ function generateHeader($loginbox = true) {
 							<input type='text' name='email' id='email' value='' placeholder='Email' />
 							</div>
         					<input type='password' name='password' value='' placeholder='Password'>
-        			<p class='submit'><input type='submit' name='commit' value='Login'></p>
+        			<p class='button special'><input type='submit' name='commit' value='Login'></p>
       			</form>
    			</div>";
 	}
