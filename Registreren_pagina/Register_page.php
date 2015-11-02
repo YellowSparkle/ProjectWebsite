@@ -142,7 +142,7 @@
 		echo "document.registerform.action='Register_script.php';";
 		echo "document.registerform.submit();";
 		echo "</script>";
-	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+	if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 		print "* Email adress is not filled in correctly<br>";
 	}
 	} elseif(array_key_exists("error", $_SESSION) && $_SESSION["error"] == true) {

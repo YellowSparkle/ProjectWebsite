@@ -3510,14 +3510,14 @@
 /* Banner */
 
 	#banner {
-		background-color: #00cdcf;
-		color: #ffffff;
+		background-color:#F2F2F2;
+		color: #000000;
 		padding: 8em 0 6em 0;
 		text-align: center;
 	}
 
 		#banner input, #banner select, #banner textarea {
-			color: #ffffff;
+			color: #000000;
 		}
 
 		#banner a {
@@ -3525,11 +3525,11 @@
 		}
 
 		#banner strong, #banner b {
-			color: #ffffff;
+			color: #000000;
 		}
 
 		#banner h1, #banner h2, #banner h3, #banner h4, #banner h5, #banner h6 {
-			color: #ffffff;
+			color: #000000;
 		}
 
 		#banner blockquote {
@@ -3609,8 +3609,8 @@
 			#banner input[type="button"].special,
 			#banner button.special,
 			#banner .button.special {
-				background-color: #009a9c;
-				color: #fff !important;
+				background-color: #ADE4FF;
+				color: #000000 !important;
 			}
 
 				#banner input[type="submit"].special:hover,
@@ -3618,7 +3618,7 @@
 				#banner input[type="button"].special:hover,
 				#banner button.special:hover,
 				#banner .button.special:hover {
-					background-color: #00b4b5;
+					background-color: #82D5FF;
 				}
 
 				#banner input[type="submit"].special:active,
@@ -3626,7 +3626,7 @@
 				#banner input[type="button"].special:active,
 				#banner button.special:active,
 				#banner .button.special:active {
-					background-color: #008183;
+					background-color: #D4EAFF;
 				}
 
 		#banner h2 {

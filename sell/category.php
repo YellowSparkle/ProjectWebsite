@@ -2,7 +2,7 @@
 	require_once "../utility/HTMLGenerator.php";
 	require_once "../utility/Header.php";
 	generateTitle("Sell your device");
-	generateHeader(false);
+	generateHeader();
 	// This is a comment
 ?>
 
