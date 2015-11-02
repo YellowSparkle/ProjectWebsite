@@ -6,9 +6,9 @@
 ?>
 
 	<head>
-		<title>Homepage</title>
+		<title>Aanmelden</title>
 		
-		<link rel="stylesheet" type="text/css" href="../utility/stylesheet.css">
+
 	</head>
 
 
@@ -31,7 +31,7 @@
           <label>
             <input type="checkbox" name="remember_me" id="remember_me">
             Stay logged in.
-          </label></br>
+          </label>
           <label><a href="../Registreren_pagina/Register_page.php"><font size="2">Don't have an account yet ? Register here!</font></a></label>
         </p>
         <p class="submit"><input type="submit" name="commit" value="Login"></p>
