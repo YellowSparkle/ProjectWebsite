@@ -20,9 +20,7 @@ function generateHeader($loginbox = true) {
 		echo "
 			<div class=headlogin>
 				<form method='post' action='../utility/Login.php'>
-							<div class='6u 12u$(medium)'>
 							<input type='text' name='email' id='email' value='' placeholder='Email' />
-							</div>
         					<input type='password' name='password' value='' placeholder='Password'>
         			<input href='#' class='button special' type='submit' value='Login'>
         			<!--<p class='button special'><input type='submit' name='commit' value='Login'></p>-->

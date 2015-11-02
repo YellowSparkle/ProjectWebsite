@@ -75,7 +75,9 @@ div.headlogin {   /*Login rechts in header*/
   top: 16%;
   left: 85%;   
   transform: translate(-50%, -50%);
-}
+  text-align:left;
+}		
+
 
 /* Reset */
 
@@ -3681,6 +3683,7 @@ div.headlogin {   /*Login rechts in header*/
 			#banner .button.special {
 				background-color: #ADE4FF;
 				color: #000000 !important;
+				width: 2px;
 			}
 
 				#banner input[type="submit"].special:hover,
