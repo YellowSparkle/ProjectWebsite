@@ -34,6 +34,7 @@
         </p>
         <p class="submit"><input type="submit" name="commit" value="Login"></p>
       </form>
+      <?php if (array_key_exists("loginerr", $_GET)){ echo "<font color='red'>* Invalid username or password *</font>"; } ?>
      </div> <!-- end login div -->
     </div> <!-- end centerbox div -->
 <!--einde van login script --> 
