@@ -14,14 +14,14 @@
 	
 	<p>
 <div class="row 200%">
-
+<div class="helemaallinksaapje"> 	</div>
 	<div class="linksaapje">
-		<form name="search"  method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
-		Zoek op: <input type="text" name="search" autocomplete="off" id="" value=""> 
+		<form name="search" method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
+		Zoek op: <input class="zoekbox" type="text" name="search" autocomplete="off" id="" value=""> 
 		<input type="submit" name="submit" value="Zoeken"> 
-	</div>
+	
 		</form>
-
+</div>
 	</p>
 
 <?php

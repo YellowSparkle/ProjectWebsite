@@ -14,16 +14,21 @@ td.fuckxavier {
 vertical-align:bottom;
 text-align:center;
 }
-
+div.helemaallinksaapje{
+	margin:0.1%;
+}
 div.linksaapje {
-	width: 25%;
-	padding: 0px 50px;
-	
+	width: 24.9%;
+	text-align:center;
 }
 
 div.rechtsaapje {
 	margin: -10% 0 0 27%;
 	
+}
+
+input.zoekbox {
+ box-align: center;
 }
 
 div.sell_left {   /*to sell plaatje*/
