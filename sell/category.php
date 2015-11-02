@@ -28,7 +28,7 @@
 		} */
 		?>  
 	<div id="buttonBox">
-		<form id="categoryButtons" class="container" action="../Product_overview_TEST/zoeken.php" method="post">
+		<form id="categoryButtons" class="container" action="../Product_overview_TEST/Zoeken.php" method="post">
 			<input class="catButton" type="submit" name="submit" value="Audio">
 			<input class="catButton" type="submit" name="submit" value="Phones">
 			<input class="catButton" type="submit" name="submit" value="Computer">
