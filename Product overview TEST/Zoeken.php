@@ -61,8 +61,8 @@ if (isset($_GET['submit'])) {
 						<th>Price</th>
 						<th>In stock</th>
 						<th>Catagory</th>
-						<th>Aantal</th>
-						<th>XAVIER IS GESTOORD</th>
+						<th>Amount</th>
+						<th>Add to cart</th>
 				  	</tr>
 					</thead>
 					<tbody>
@@ -83,7 +83,7 @@ if (isset($_GET['submit'])) {
 				<?php
 				} // einde while om resultaten af te drukken
 			} else {
-				echo "Geen resultaten voor \"<b>$search</b>\" in <b>$field</b>."; // Als er niets wordt gevonden krijg je deze melding
+				echo "Geen resultaten voor ".$search."."; // Als er niets wordt gevonden krijg je deze melding
 			} // einde else als er GEEN resultaten zijn gevonden	
 		 ?>
 		 </div> 
