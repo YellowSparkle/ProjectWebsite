@@ -18,10 +18,9 @@
 			$row = mysql_fetch_assoc($result);
 			if (password_verify($password,$row['Password'])){ 
         		echo "Login Successful";
+				$_SESSION['username'] = $row['First_name'];
 			} else {
 				echo "Login Unsuccesful! 0_0\n";
-				echo $row['Password'];
-				echo "\n" . $password;
 			}
 		}
 	generateHeader();

@@ -1,6 +1,7 @@
 <?php
    	require "../utility/HTMLGenerator.php";
 	require "../utility/Header.php";
+	require '../';
 	generateTitle("Order complete");
 	generateHeader();
 	
@@ -8,7 +9,12 @@
 ?>
 <html lang="en">
 	<head>
-		<title>Offer your product</title>
+		<title>Sell your product</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 
 <body>
@@ -18,6 +24,8 @@
 		<fieldset width: 100%;>
 			<LEGEND><b>Product includes a working:</b></LEGEND>
 			  	<ul class="checkbox">
+			  												<input type="radio" id="priority-low" name="priority" checked>
+										<label for="priority-low">Low Priority</label>
 			    <li><input type="checkbox" name="Working" id="del1" value="Charger" /><label for="del1">Charger</label></li>
 			    <li><input type="checkbox" name="Working" id="del2" value="Powercable" /><label for="del2">Powercable</label></li>
 			    <li><input type="checkbox" name="Working" id="del5" value="Charge_port" /><label for="del5"></label>Charging port</li>
