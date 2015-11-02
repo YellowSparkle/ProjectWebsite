@@ -1,6 +1,5 @@
 
-
-<?php 
+<?php
 	require "../utility/HTMLGenerator.php";
 	require "../utility/Header.php";
 	generateTitle("Order complete");
