@@ -7,6 +7,9 @@
 	generateTitle("Registration");
 	generateHeader();
 ?>
+	
+	
+	
 	<form name="registerform" method="post" action="Register_page.php" class="tekst">
 	
 	<ul>
@@ -139,6 +142,9 @@
 		echo "document.registerform.action='Register_script.php';";
 		echo "document.registerform.submit();";
 		echo "</script>";
+	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		print "* Email adress is not filled in correctly<br>";
+	}
 	} elseif(array_key_exists("error", $_SESSION) && $_SESSION["error"] == true) {
 		echo "<br>";
 		echo "<font color='red'>";
