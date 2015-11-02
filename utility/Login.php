@@ -24,9 +24,9 @@
 			}
 		}
 	generateHeader();
-	echo '<meta http-equiv="refresh" content="5;url=../index/optionpage.php" />'; //Auto redirect
+	echo '<center><meta http-equiv="refresh" content="5;url=../index/optionpage.php" />'; //Auto redirect
 	echo "Logging in please wait...<br>";
-	echo "<a href='../index/optionpage.php'>If nothing happens after 5 seconds, click here to go back.</a>";
+	echo "<a href='../index/optionpage.php'>If nothing happens after 5 seconds, click here to go back.</a></center>";
 	generateFoot();
 	}
 ?>
