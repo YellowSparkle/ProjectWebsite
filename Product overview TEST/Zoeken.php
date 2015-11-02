@@ -61,6 +61,7 @@ if (isset($_GET['submit'])) {
 						<th>Price</th>
 						<th>In stock</th>
 						<th>Catagory</th>
+						<th>test</th>
 				  	</tr>
 					</thead>
 					<tbody>
@@ -72,7 +73,13 @@ if (isset($_GET['submit'])) {
 						<td><?php echo $row['Description']; ?>			</td>
 						<td><?php echo $row['Price']; ?>				</td>
 						<td><?php echo $row['In_stock']; ?>				</td>
-						<td><?php echo $row['Catagory']; ?>				</td>	
+						<td><?php echo $row['Catagory']; ?>				</td>
+						<td>
+							<div>
+						<input type="text" size="2" value="1" name="quantity">
+						<input class="button special" type="submit" value="Add to cart">
+							</div>	
+						</td>	
 			   		</tr>
 
 				 </tbody>
