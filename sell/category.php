@@ -4,7 +4,6 @@
 	generateTitle("Sell your device");
 	generateHeader(false);
 	// This is a comment
-	var_dump($_POST);
 ?>
 
 <div id="groupBox">
