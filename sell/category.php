@@ -4,7 +4,6 @@
 	generateTitle("Sell your device");
 	generateHeader();
 	// This is a comment
-	var_dump($_GET);
 ?>
 
 <div id="groupBox">
@@ -29,11 +28,11 @@
 			echo "details.php"; 
 		} 
 		?> " method="get">
-			<input class="catButton" type="submit" name="submit" value="Audio">
-			<input class="catButton" type="submit" name="submit" value="Phones">
-			<input class="catButton" type="submit" name="submit" value="Computer">
-			<input class="catButton" type="submit" name="submit" value="Television">
-			<input class="catButton" type="submit" name="submit" value="Radio">
+			<input id="catbutton" class="button special" type="submit" name="submit" value="Audio">
+			<input id="catbutton" class="button special" type="submit" name="submit" value="Phones">
+			<input id="catbutton" class="button special" type="submit" name="submit" value="Computer">
+			<input id="catbutton" class="button special" type="submit" name="submit" value="Television">
+			<input id="catbutton" class="button special" type="submit" name="submit" value="Radio">
 		</form>
 	</div>
 </div>
@@ -42,6 +41,6 @@
 	addStyle("#groupBox {text-align: center;vertical-align:middle;}");
 	addStyle("#imageBox {text-align: center;}");
 	addStyle("#buttonBox {text-align: center;}");
-	addStyle(".catButton {width:145px;}");
+	addStyle("#catbutton {width:145px;}");
 	generateFoot();
 ?>
