@@ -14,14 +14,19 @@
 	
 	<p>
 <div class="row 200%">
-
+<div class="helemaallinksaapje"> 	</div>
 	<div class="linksaapje">
+<<<<<<< HEAD:Product_overview_TEST/Zoeken.php
 		<form method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
 		Zoek op: <input type="text" name="search" autocomplete="off" id="" value=""> 
+=======
+		<form name="search" method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
+		Zoek op: <input class="zoekbox" type="text" name="search" autocomplete="off" id="" value=""> 
+>>>>>>> 326afe7ad10e99779a4481dc8abc722c0f1da507:Product overview TEST/Zoeken.php
 		<input type="submit" name="submit" value="Zoeken"> 
-	</div>
+	
 		</form>
-
+</div>
 	</p>
 
 <?php
@@ -61,8 +66,8 @@ if (isset($_GET['submit'])) {
 						<th>Price</th>
 						<th>In stock</th>
 						<th>Catagory</th>
-						<th>Aantal</th>
-						<th>XAVIER IS GESTOORD</th>
+						<th>Amount</th>
+						<th>Add to cart</th>
 				  	</tr>
 					</thead>
 					<tbody>
@@ -83,7 +88,11 @@ if (isset($_GET['submit'])) {
 				<?php
 				} // einde while om resultaten af te drukken
 			} else {
+<<<<<<< HEAD:Product_overview_TEST/Zoeken.php
 				echo "Geen resultaten voor " .$search."."; // Als er niets wordt gevonden krijg je deze melding
+=======
+				echo "Geen resultaten voor ".$search."."; // Als er niets wordt gevonden krijg je deze melding
+>>>>>>> 326afe7ad10e99779a4481dc8abc722c0f1da507:Product overview TEST/Zoeken.php
 			} // einde else als er GEEN resultaten zijn gevonden	
 		 ?>
 		 </div> 
