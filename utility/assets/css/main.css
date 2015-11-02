@@ -53,14 +53,18 @@ div.plaatje1 {   /*plaatje rechts*/
   position: absolute;   
   top: 50%;
   left: 75%;   
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
+  border: 3px solid;
+  color: #ADE4FF; 
 }
 
 div.plaatje2 {   /*plaatje links*/
   position: absolute;   
   top: 50%;
   left: 25%;   
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
+  border: 3px solid;
+  color: #ADE4FF; 
 }
 
 div.centerbox {   /*center login*/
@@ -1840,7 +1844,7 @@ div.headlogin {   /*Login rechts in header*/
 	}
 
 	a {
-		color: #00cdcf;
+		color: #74D1FF;
 	}
 
 	strong, b {
