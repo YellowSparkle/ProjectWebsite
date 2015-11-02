@@ -33,7 +33,7 @@ if (isset($_GET['submit'])) {
         //Zoekopdracht
         
          //Met query in producten zoeken
-            $query = "    SELECT * 
+            $query = "  SELECT * 
                         FROM Product 
                         WHERE Product_number LIKE '%$search%' 
                         OR Product_name LIKE '%$search%' 
