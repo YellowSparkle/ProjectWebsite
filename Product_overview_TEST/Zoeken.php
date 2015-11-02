@@ -16,7 +16,7 @@
 <div class="row 200%">
 
 	<div class="linksaapje">
-		<form name="search"  method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
+		<form method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
 		Zoek op: <input type="text" name="search" autocomplete="off" id="" value=""> 
 		<input type="submit" name="submit" value="Zoeken"> 
 	</div>
@@ -54,7 +54,7 @@ if (isset($_GET['submit'])) {
 				</p>
 				<table class="alt" style="margin-right: 2cm;">
 					<thead>
-					<tr>
+					<tr
 						<th>Productnr.</th>
 						<th>Name</th>
 						<th>Description</th>
@@ -83,7 +83,7 @@ if (isset($_GET['submit'])) {
 				<?php
 				} // einde while om resultaten af te drukken
 			} else {
-				echo "Geen resultaten voor \"<b>$search</b>\" in <b>$field</b>."; // Als er niets wordt gevonden krijg je deze melding
+				echo "Geen resultaten voor " .$search."."; // Als er niets wordt gevonden krijg je deze melding
 			} // einde else als er GEEN resultaten zijn gevonden	
 		 ?>
 		 </div> 

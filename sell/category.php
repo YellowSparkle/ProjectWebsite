@@ -20,15 +20,15 @@
 			echo getImgTag("radioicon", 150);
 		?>
 	</div>
-	<div id="buttonBox">
-		<form id="categoryButtons" class="container" action="
-		<?php 
+			<?php /*
 		if(array_key_exists("submit", $_GET) && $_GET["submit"] == "Buy a Product") {
 			echo "../Shoppingcart/index.php"; 
 		} else {
 			echo "details.php"; 
-		} 
-		?> " method="get">
+		} */
+		?>  
+	<div id="buttonBox">
+		<form id="categoryButtons" class="container" action="../Product_overview_TEST/zoeken.php" method="post">
 			<input class="catButton" type="submit" name="submit" value="Audio">
 			<input class="catButton" type="submit" name="submit" value="Phones">
 			<input class="catButton" type="submit" name="submit" value="Computer">

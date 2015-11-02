@@ -26,8 +26,8 @@ function generateHeader($loginbox = true, $logoutbox = true) {
 				<form method='post' action='../utility/Login.php'>
 							<input type='text' name='email' id='email' value='' placeholder='Email' />
         					<input type='password' name='password' value='' placeholder='Password'>
-        			<input href='#' class='button special' type='submit' value='Login'>
-        			<!--<p class='button special'><input type='submit' name='commit' value='Login'></p>-->
+        			<input href='#' class='button special' type='submit' value='Login'> <br>
+        			<a href='../Registreren_pagina/Register_page.php'><font size='2'>Don't have an account? Register here!</font></a></label>
       			</form>
    			</div>";
 	}
