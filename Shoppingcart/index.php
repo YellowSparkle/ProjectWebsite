@@ -1,17 +1,16 @@
-<HTML>
-<HEAD>
-<TITLE>Simple PHP Shopping Cart</TITLE>
-<link href="style.css" type="text/css" rel="stylesheet" />
-</HEAD>
+<?php
+	require_once "../utility/HTMLGenerator.php";
+	require_once "../utility/Header.php";
+	require_once "../utility/imageprovider.php";
+	generateTitle("Sell your device");
+	generateHeader(FALSE);
+?>
+
+
 <BODY>
-
-
 
 <?php
 
-require_once "../utility/imageprovider.php";
-
-session_start();
 require_once("dbcontroller.php");
 $db_handle = new DBController();
 if(!empty($_GET["action"])) {
@@ -116,4 +115,3 @@ if(isset($_SESSION["cart_item"])){
 	?>
 </div>
 </BODY>
-</HTML>
