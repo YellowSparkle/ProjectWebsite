@@ -1,4 +1,6 @@
-<?php
+
+							
+							<?php
 $link = mysqli_connect("yellowsparkle.sentientturtle.me", "Joost", "Project")
 		or die("Error connecting to server".   mysqli_connect_error()  );
 	
@@ -10,6 +12,9 @@ $link = mysqli_connect("yellowsparkle.sentientturtle.me", "Joost", "Project")
 ?>
 
 <html>
+	<head>
+		
+<link rel="stylesheet" href="../utility/assets/css/main.css" />
 	<style>
 table, th, td {
     border: 1px solid black;
@@ -20,15 +25,13 @@ th, td {
     text-align: left;
 }
 </style>
+</head>
 <body>
 <h3>Zoeken</h3>
 
 <p>
-<form name="search" method="get" action=""> 
+<form name="search" method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
 Zoek op: <input type="text" size="30" name="search" autocomplete="off" id="" value=""> 
-in <Select NAME="field"> 
-   <Option VALUE="Product">Product</option>  
-   </Select> 
 <input type="submit" name="submit" value="Zoeken"> 
 </form>
 </p>
@@ -55,43 +58,41 @@ if (isset($_GET['submit'])) {
 			$numrows = mysqli_num_rows($result);
 
 			if ($numrows >= 1) { ?>
-				<?php while ($row = mysqli_fetch_assoc($result)) { ?>
+			<div class="table-wrapper">
 				<p>
 				Gevonden resultaten:
 				</p>
-				<table id="t01" style="width:100%">
+				<table class="alt">
+					<thead>
 					<tr>
-				  	<tr>
-			    <th>Productnumber</th>
-			    <td><?php echo $row['Product_number']; ?>		</td>
+						<th>Productnumber</th>
+						<th>Productname</th>
+						<th>Description</th>
+						<th>Price in euros</th>
+						<th>In stock</th>
+						<th>Catagory</th>
+				  	</tr>
+					</thead>
+					<tbody>
+				<?php while ($row = mysqli_fetch_assoc($result)) { ?>
+					<tr>
+						<td><?php echo $row['Product_number']; ?>		</td>
+						<td><?php echo $row['Product_name']; ?>			</td>
+						<td><?php echo $row['Description']; ?>			</td>
+						<td><?php echo $row['Price']; ?>				</td>
+						<td><?php echo $row['In_stock']; ?>				</td>
+						<td><?php echo $row['Catagory']; ?>				</td>	
 			   		</tr>
-			   		<tr>
-				<th>Productname</th>
-				<td><?php echo $row['Product_name']; ?>			</td>
-					</tr>
-					<tr>		
-			    <th>Description</th>
-			    <td><?php echo $row['Description']; ?>			</td>
-			    	</tr>
-					<tr>		
-				<th>Price in euros</th>
-				<td><?php echo $row['Price']; ?>				</td>
-					</tr>
-					<tr>
-				<th>In stock</th>
-				<td><?php echo $row['In_stock']; ?>				</td>
-					</tr>
-					<tr>
-				<th>Catagory</th>
-				<td><?php echo $row['Catagory']; ?>				</td>
-			    	</tr>
-				 	</tr>
+
+				 </tbody>
 				<?php
 				}
 			} else {
 				echo "Geen resultaten voor \"<b>$search</b>\" in <b>$field</b>."; 
 			}	
-		 
+		 ?>
+		 </div> 
+		 <?php
 	}
 }
 ?>
