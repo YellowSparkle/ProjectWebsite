@@ -12,6 +12,7 @@ generateHeader();
 		<title>Make your choice.</title>
 	</head>
 	<link rel="stylesheet" type="text/css" href="../utility/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="../utility/assets/css/main.css">
 <body>
 
  
@@ -19,11 +20,11 @@ generateHeader();
 		<form id="categoryButtons" class="container" action="../sell/category.php" method="get">
 			<div class=sell_left>
 				<p><img src="../img/sellimage.jpg" width="400px" height="350px" alt="" border=2></p>
-				<p><input class="catButton" type="submit" name="submit" value="Sell a Product">
+				<p><input class="button special" type="submit" name="submit" value="Sell a Product">
 			</div>
 			<div class=buy_right>
 				<p><img src="../img/buyimage.jpg" width="400px" height="350px" alt="" border=2></p>
-				<input class="catButton" type="submit" name="submit" value="Buy a Product">
+				<input class="button special" type="submit" name="submit" value="Buy a Product">
 				</div>
 		</form>
 	</div> 
