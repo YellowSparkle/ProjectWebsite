@@ -4,6 +4,7 @@
 	generateTitle("Sell your device");
 	generateHeader(false);
 	// This is a comment
+	var_dump($_GET);
 ?>
 
 <div id="groupBox">
@@ -20,7 +21,14 @@
 		?>
 	</div>
 	<div id="buttonBox">
-		<form id="categoryButtons" class="container" action="details.php" method="get">
+		<form id="categoryButtons" class="container" action="
+		<?php 
+		if(array_key_exists("submit", $_GET) && $_GET["submit"] == "Buy a Product") {
+			echo "../Shoppingcart/index.php"; 
+		} else {
+			echo "details.php"; 
+		} 
+		?> " method="get">
 			<input class="catButton" type="submit" name="submit" value="Audio">
 			<input class="catButton" type="submit" name="submit" value="Phones">
 			<input class="catButton" type="submit" name="submit" value="Computer">
