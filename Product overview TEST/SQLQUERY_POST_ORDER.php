@@ -36,8 +36,8 @@ $insert_query = "
 							);
 				";
 
-	$testupdate1 = mysql_query($create_query, $link) or die (mysqli_error());
-	$testupdate2 = mysql_query($insert_query, $link) or die (mysqli_error());
+	$testupdate1 = mysql_query($create_query, $link) or die (mysql_error());
+	$testupdate2 = mysql_query($insert_query, $link) or die (mysql_error());
 
 /* c.Customer_id
   or.Product_number

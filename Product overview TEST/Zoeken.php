@@ -1,38 +1,32 @@
 <?php
-
-
-//Zie deze prachtige database connectie
-//Deze is nodig omdat er anders te veel mysql en mysqli verschillen zijn.
-//NIET VERWIJDEREN :)
-	include "../include.php";
-	require_once "../utility/HTMLGenerator.php";
-	require_once "../utility/Header.php";
-	generateTitle("Search");
-	generateHeader();
+	include "../include.php";						//Hier staat de connectie e.d. in
+	require_once "../utility/HTMLGenerator.php";	//Geen idee
+	require_once "../utility/Header.php"; 			//De header erbij betrekken
+	generateTitle("Search"); 						//Titel bovenaan de pagina
+	generateHeader();								
+	
 ?>
 
 <html>
-	
 <head>
-<link rel="stylesheet" href="../utility/assets/css/main.css" />	
 </head>
-
 <body>
-
-
-<p>
+	
+	<p>
 <div class="row 200%">
-<div class="6u 12u$(medium)">
-<form name="search" method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
-Zoek op: <input type="text" size="30" name="search" autocomplete="off" id="" value=""> 
-<input type="submit" name="submit" value="Zoeken"> 
-</div>
-</form>
-</p>
+
+	<div class="6u 12u$(medium)">
+		<form name="search" method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
+		Zoek op: <input type="text" size="30" name="search" autocomplete="off" id="" value=""> 
+		<input type="submit" name="submit" value="Zoeken"> 
+	</div>
+		</form>
+
+	</p>
 
 <?php
 if (isset($_GET['submit'])) {
-	if ($_GET['search'] == "") { //Eerst kijken of er wat is ingevoerd
+	if ($_GET['search'] == "") { //Eerst kijken of er wat is ingevoerd. Anders krijg je melding dat er niets is ingevoerd
 		echo "<font style='color:red'>Voer een zoekopdracht in</font>";  
 	} else {
 		$search = mysql_real_escape_string($_GET['search'],$link );
@@ -70,7 +64,8 @@ if (isset($_GET['submit'])) {
 				  	</tr>
 					</thead>
 					<tbody>
-				<?php while ($row = mysql_fetch_assoc($result)) { ?>
+				<?php while ($row = mysql_fetch_assoc($result)) { 
+					// Hier word de resultaat van hierboven ergens query in een assoc array afgedrukt. 	?> 
 					<tr>
 						<td><?php echo $row['Product_number']; ?>		</td>
 						<td><?php echo $row['Product_name']; ?>			</td>
@@ -82,17 +77,17 @@ if (isset($_GET['submit'])) {
 
 				 </tbody>
 				<?php
-				}
+				} // einde while om resultaten af te drukken
 			} else {
-				echo "Geen resultaten voor \"<b>$search</b>\" in <b>$field</b>."; 
-			}	
+				echo "Geen resultaten voor \"<b>$search</b>\" in <b>$field</b>."; // Als er niets wordt gevonden krijg je deze melding
+			} // einde else als er GEEN resultaten zijn gevonden	
 		 ?>
 		 </div> 
  	</div>
 	</div>
 		 <?php
-	}
-}
+	} // einde else zoekfunctie. Dit is in een else omdat in de eerste if word gecontroleerd of er wel iets is ingevoerd.
+} // einde if/else van complete zoekfunctie
 ?>
 
 			</table>
