@@ -11,8 +11,10 @@ generateHeader();
 	<head>
 		<title>Make your choice.</title>
 	</head>
+	
+
 	<link rel="stylesheet" type="text/css" href="../utility/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="../utility/assets/css/main.css">
+	
 <body>
 
  

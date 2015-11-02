@@ -26,6 +26,7 @@ div.plaatje2 {   /*plaatje links*/
 /* start option page */
 
 div.sell_left {   /*to sell knop*/
+  display: inline-block;
   position: absolute;   
   top: 50%;
   left: 33%;   
@@ -34,6 +35,7 @@ div.sell_left {   /*to sell knop*/
 }
 
 div.buy_right {   /*to buy knop*/
+  display: inline-block;
   position: absolute;   
   top: 50%;
   left: 66%;   
