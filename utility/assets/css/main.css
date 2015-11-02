@@ -10,22 +10,24 @@ img.optionimage {
 	display: block;
 }
 
-div.sell_left {   /*to sell knop*/
+div.sell_left {   /*to sell plaatje*/
   position: absolute;   
   top: 50%;
   left: 33%;   
   transform: translate(-50%, -50%) ; 
   text-align: center;
   border: 3px solid;
+  color: #ADE4FF;
 }
 
-div.buy_right {   /*to buy knop*/
+div.buy_right {   /*to buy plaatje*/
   position: absolute;   
   top: 50%;
   left: 66%;   
   transform: translate(-50%, -50%) ; 
   text-align: center;
   border: 3px solid;
+  color: #ADE4FF;
 }
 
 div.buttonleft {   /*to sell knop*/
@@ -34,6 +36,7 @@ div.buttonleft {   /*to sell knop*/
   left: 33%;   
   transform: translate(-50%, -50%) ; 
   text-align: center;
+  color: #ADE4FF;
 }
 
 div.buttonright {   /*to sell knop*/
@@ -42,6 +45,7 @@ div.buttonright {   /*to sell knop*/
   left: 66%;   
   transform: translate(-50%, -50%) ; 
   text-align: center;
+  color: #ADE4FF;
 }
 /* end option page */
 
@@ -2039,7 +2043,7 @@ div.headlogin {   /*Login rechts in header*/
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #00cdcf;
+			background-color: #ADE4FF;;
 			color: #ffffff !important;
 		}
 
@@ -2048,7 +2052,7 @@ div.headlogin {   /*Login rechts in header*/
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #00e6e9;
+				background-color: #74D1FF;
 			}
 
 			input[type="submit"].special:active,
@@ -2056,7 +2060,7 @@ div.headlogin {   /*Login rechts in header*/
 			input[type="button"].special:active,
 			button.special:active,
 			.button.special:active {
-				background-color: #00b4b5;
+				background-color: #ADE4FF;;
 			}
 
 /* Form */
