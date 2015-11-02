@@ -7,8 +7,6 @@
 
 	<head>
 		<title>Aanmelden</title>
-		
-
 	</head>
 
 
