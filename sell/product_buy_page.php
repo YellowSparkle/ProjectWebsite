@@ -1,47 +1,61 @@
 <?php
    	require "../utility/HTMLGenerator.php";
 	require "../utility/Header.php";
-	require '../';
+	
 	generateTitle("Order complete");
 	generateHeader();
-	
-	
 ?>
 <html lang="en">
 	<head>
 		<title>Sell your product</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link rel="stylesheet" href="../utility/assets/css/main.css" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
+		
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 
 <body>
-		
+
  <!--Working parts checkboxes--->
-	<div class="checkboxes_working">
+	<!--<div class="checkboxes_working"> 
+		<ul class="checkbox">
 		<fieldset width: 100%;>
+		-->
 			<LEGEND><b>Product includes a working:</b></LEGEND>
-			  	<ul class="checkbox">
-			  												<input type="radio" id="priority-low" name="priority" checked>
-										<label for="priority-low">Low Priority</label>
-			    <li><input type="checkbox" name="Working" id="del1" value="Charger" /><label for="del1">Charger</label></li>
-			    <li><input type="checkbox" name="Working" id="del2" value="Powercable" /><label for="del2">Powercable</label></li>
-			    <li><input type="checkbox" name="Working" id="del5" value="Charge_port" /><label for="del5"></label>Charging port</li>
-			    <li><input type="checkbox" name="Working" id="del3" value="Battery" /><label for="del3">Battery</label></li>
-			    <li><input type="checkbox" name="Working" id="del4" value="Screen" /><label for="del4"></label>Screen</li>
-			    <li><input type="checkbox" name="Working" id="del5" value="Booting" /><label for="del5"></label>Successful boot</li>
-			    <li><input type="checkbox" name="Working" id="del6" value="Headphone_port" /><label for="del6"></label>Headphone port</li>
-			  	</ul>
+			  
+			  	<div class="6u 12u$(small)">
+			  		<li></li>
+					<input type="checkbox" id="Charger" name="Charger">
+					<label for="Charger">Charger</label>
+					</li><li>				
+					<input type="checkbox" id="Power Cable" name="Power Cable">
+					<label for="Power Cable">Power Cable</label>
+					</li><li>
+					<input type="checkbox" id="Chargingport" name="Chargingport">
+					<label for="Chargingport">Chargingport</label>
+					</li><li>	
+					<input type="checkbox" id="Battery" name="Battery">
+					<label for="Battery">Battery</label>
+					</li><li>	
+					<input type="checkbox" id="Screen" name="Screen">
+					<label for="Screen">Screen</label>
+					</li><li>	
+					<input type="checkbox" id="Succesful boot" name="Succesful boot">
+					<label for="Succesful boot">Succesful boot</label>
+					</li><li>
+					<input type="checkbox" id="Headphone port" name="Headphone port">
+					<label for="Headphone port">Headphone port</label>
+					</li>
+				</ul>
 			</fieldset>
-	</div>
+		</div>
 <!-------------------------->
 
 
 <!-- SELECT BRAND DROP DOWN-->
-	<div class="brand">
-		<fieldset width: 100%;>
+
 			<LEGEND><b>Pick a brand:</b></LEGEND>
 			<select style="width: 160px !important; min-width: 160px; max-width: 160px;">
 	  		  <option value="Pick_brand">Pick a brand</option>
@@ -49,38 +63,32 @@
 			  <option value="Nokia">Nokia</option>
 			  <option value="Apple">Apple</option>
 			</select>
-		</fieldset>
-	</div>
  <!-------------------------->
  
  <!-- PRICE TEXTBOX -->
- 	<div class="price">
-		<fieldset width: 100%;>
 			<LEGEND><b>Price:</b></LEGEND>
-			Price: <input type="text" style="width:108px;"><br>
-		</fieldset>
-	</div>
+			<li><input type="text" style="width:108px;"><br></li>
+
  <!-------------------------->
  
   <!-- DICRIPTION TEXTBOX -->
- 	<div class="beschrijving">
-		<fieldset width: 100%;>
+
 			<LEGEND><b>Product discription:</b></LEGEND>
 				<textarea name="Text1" cols="60" rows="5"></textarea>
-		</fieldset>
-	</div>
+	
  <!-------------------------->
  
- 
+
   <!-- STATUS RADIO BUTTONS -->
- 	<div class="status_product">
-		<fieldset width: 100%;>
+
 			<LEGEND><b>State of product:</b></LEGEND>
-				<input type="radio" name="staat" value="new" checked>New              
-  				<br>
-  				<input type="radio" name="staat" value="secondhand">secondhand
-		</fieldset>
-	</div>
+			<div class="4u 12u$(small)">
+				<input type="radio" id="new" name="new">
+				<label for="new">New</label>              
+  				
+  				<input type="radio" id="second_hand" name="second_hand">
+				<label for="second_hand">Second hand</label> 
+				</div> 
  <!--------------------------> 
 </body>
 	
