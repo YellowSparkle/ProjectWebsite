@@ -18,12 +18,15 @@
 </head>
 
 <body>
-<h3>Zoeken</h3>
+
 
 <p>
+<div class="row 200%">
+<div class="6u 12u$(medium)">
 <form name="search" method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
 Zoek op: <input type="text" size="30" name="search" autocomplete="off" id="" value=""> 
 <input type="submit" name="submit" value="Zoeken"> 
+</div>
 </form>
 </p>
 
@@ -50,6 +53,7 @@ if (isset($_GET['submit'])) {
 			//Hier heb je een werkende query met (meerdere) waarde(s) in variable gedrukt.
 		
 			if ($numrows >= 1) { ?>
+		<div class="6u$ 12u$(medium)">
 			<div class="table-wrapper">
 				<p>
 				Gevonden resultaten:
@@ -57,8 +61,8 @@ if (isset($_GET['submit'])) {
 				<table class="alt">
 					<thead>
 					<tr>
-						<th>Productnumber</th>
-						<th>Productname</th>
+						<th>Productnr.</th>
+						<th>Name</th>
 						<th>Description</th>
 						<th>Price in euros</th>
 						<th>In stock</th>
@@ -84,6 +88,8 @@ if (isset($_GET['submit'])) {
 			}	
 		 ?>
 		 </div> 
+ 	</div>
+	</div>
 		 <?php
 	}
 }
