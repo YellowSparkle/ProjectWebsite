@@ -64,7 +64,7 @@ if (isset($_GET['submit'])) {
 						<th>Productnr.</th>
 						<th>Name</th>
 						<th>Description</th>
-						<th>Price in euros</th>
+						<th>Price</th>
 						<th>In stock</th>
 						<th>Catagory</th>
 				  	</tr>
