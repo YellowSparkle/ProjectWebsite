@@ -10,6 +10,22 @@ img.optionimage {
 	display: block;
 }
 
+td.fuckxavier {
+vertical-align:bottom;
+text-align:center;
+}
+
+div.linksaapje {
+	width: 25%;
+	padding: 0 50px;
+	
+}
+
+div.rechtsaapje {
+	margin: -10% 0 0 27%;
+	
+}
+
 div.sell_left {   /*to sell plaatje*/
   position: absolute;   
   top: 50%;
@@ -79,7 +95,9 @@ div.headlogin {   /*Login rechts in header*/
   top: 16%;
   left: 85%;   
   transform: translate(-50%, -50%);
-}
+  text-align:left;
+}		
+
 
 /*div, halve zool*/
 
@@ -3693,6 +3711,7 @@ div.headlogin {   /*Login rechts in header*/
 			#banner .button.special {
 				background-color: #ADE4FF;
 				color: #000000 !important;
+				width: 2px;
 			}
 
 				#banner input[type="submit"].special:hover,
