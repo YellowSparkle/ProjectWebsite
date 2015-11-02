@@ -1115,6 +1115,7 @@ div.centerbox {   /*center login*/
 
 		.\-6u\28medium\29 {
 			margin-left: 50%;
+			width: 10px;
 		}
 
 		.\-5u\28medium\29 {
@@ -1918,7 +1919,7 @@ div.centerbox {   /*center login*/
 			opacity: 0.25;
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 200px) {
 
 			input[type="submit"],
 			input[type="reset"],
