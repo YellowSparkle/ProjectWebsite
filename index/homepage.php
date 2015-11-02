@@ -8,7 +8,7 @@
 	<head>
 		<title>Homepage</title>
 		
-		<link rel="stylesheet" type="text/css" href="../utility/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="../utility/assets/css/main.css">
 	</head>
 
 
