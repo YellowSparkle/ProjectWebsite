@@ -7,9 +7,6 @@ generateTitle("Make your choice.");
 generateHeader();
  ?>
 
-
-<link rel="stylesheet" type="text/css" href="../utility/assets/css/main.css">
-
  
  <div id="buttonBox2">
  	<form id="categoryButtons" class="container" action="../sell/category.php" method="get">
