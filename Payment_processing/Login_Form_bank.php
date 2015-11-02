@@ -7,7 +7,7 @@
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../utility/assets/css/main.css" />
 	</head>
 	<body>
 
