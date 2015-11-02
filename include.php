@@ -13,15 +13,15 @@ if (mysqli_connect_errno()) { /* Check connection
 	echo "Failed to connect to MySQL: " . mysqli_connect_error(); 
 }*/
 
-/*	$link = mysql_connect("yellowsparkle.sentientturtle.me", "Joost", "Project")
+$link = mysql_connect("yellowsparkle.sentientturtle.me", "Joost", "Project")
 		or die("Error connecting to server".   mysqli_connect_error()  );
 	
 	mysql_select_db("projectdb")
-		or die("Database not available"); */
+		or die("Database not available");
 		
 		
 		
-global class DBController {
+/*global class DBController {
 	private $host = "yellowsparkle.sentientturtle.me";
 	private $user = "Joost";
 	private $password = "Project";
@@ -42,5 +42,5 @@ global class DBController {
 	function selectDB($conn) {
 		mysql_select_db($this->database,$conn);
 	}
-}
+}*/
 ?>

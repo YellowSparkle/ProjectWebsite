@@ -1,12 +1,6 @@
 <?php
 
 include "../include.php";
-$connect = new DBController;
-/*$link = mysqli_connect("yellowsparkle.sentientturtle.me", "Joost", "Project")
-		or die("Error connecting to server".   mysqli_connect_error()  );
-	
-mysqli_select_db($link,"projectdb")
-		or die("Database not available");*/
 	
 	
 	$product = 1;//$_POST(*VOERPRODUCTIN*);
@@ -20,7 +14,7 @@ mysqli_select_db($link,"projectdb")
     	AND In_stock > 0;
     	";
 	
-	$testupdate = mysqli_query($connect, $update_stock) or die (mysqli_error());
+	$testupdate = mysql_query($update_stock, $link) or die (mysqli_error());
 	
 	
 ?>

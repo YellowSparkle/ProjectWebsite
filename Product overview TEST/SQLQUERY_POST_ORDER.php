@@ -1,10 +1,6 @@
 <?php
 
-$link = mysqli_connect("yellowsparkle.sentientturtle.me", "Joost", "Project")
-		or die("Error connecting to server".   mysqli_connect_error()  );
-	
-mysqli_select_db($link,"projectdb")
-		or die("Database not available");
+include "../include.php";
 		
 $klantnummer = "51";
 
@@ -26,12 +22,9 @@ $create_query =	"
 				
 $insert_query = "
 				INSERT INTO `Shoppingcart_$klantnummer` (	
-<<<<<<< HEAD
 							`Product_name`, 
-=======
 							`Product_number`, 
 							`Discription`, 
->>>>>>> de05552019bb023e464ccf0a10a2b98046939c10
 							`Price`,
 							`In_stock`
 							) 
@@ -43,8 +36,8 @@ $insert_query = "
 							);
 				";
 
-	$testupdate1 = mysqli_query($link, $create_query) or die (mysqli_error());
-	$testupdate2 = mysqli_query($link, $insert_query) or die (mysqli_error());
+	$testupdate1 = mysql_query($create_query, $link) or die (mysqli_error());
+	$testupdate2 = mysql_query($insert_query, $link) or die (mysqli_error());
 
 /* c.Customer_id
   or.Product_number
