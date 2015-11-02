@@ -10,6 +10,22 @@ img.optionimage {
 	display: block;
 }
 
+td.fuckxavier {
+vertical-align:bottom;
+text-align:center;
+}
+
+div.linksaapje {
+	width: 25%;
+	float: left;
+	
+}
+
+div.rechtsaapje {
+	margin: -10% 0 0 27%;
+	
+}
+
 div.sell_left {   /*to sell plaatje*/
   position: absolute;   
   top: 50%;
