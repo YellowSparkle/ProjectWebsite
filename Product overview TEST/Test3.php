@@ -1,50 +1,38 @@
-
-							
-							<?php
-$link = mysqli_connect("yellowsparkle.sentientturtle.me", "Joost", "Project")
-		or die("Error connecting to server".   mysqli_connect_error()  );
+<?php
+	include "../include.php";						//Hier staat de connectie e.d. in
+	require_once "../utility/HTMLGenerator.php";	//Geen idee
+	require_once "../utility/Header.php"; 			//De header erbij betrekken
+	generateTitle("Search"); 						//Titel bovenaan de pagina
+	generateHeader();								
 	
-	mysqli_select_db($link,"projectdb")
-		or die("Database not available");
-//Zie deze prachtige database connectie
-//Deze is nodig omdat er anders te veel mysql en mysqli verschillen zijn.
-//NIET VERWIJDEREN :)
 ?>
 
 <html>
-	<head>
-		
-<link rel="stylesheet" href="../utility/assets/css/main.css" />
-	<style>
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
-    text-align: left;
-}
-</style>
+<head>
 </head>
 <body>
-<h3>Zoeken</h3>
+	
+	<p>
+<div class="row 100%">
 
-<p>
-<form name="search" method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
-Zoek op: <input type="text" size="30" name="search" autocomplete="off" id="" value=""> 
-<input type="submit" name="submit" value="Zoeken"> 
-</form>
-</p>
+	<div class="3u 12u$(medium)">
+		<form name="search" method="get" action=""> <!--Hier voer je de zoekopdracht in. In de browser-->
+		Zoek op: <input type="text" size=10px name="search" autocomplete="off" id="" value="" > 
+		<input type="submit" name="submit" value="Zoeken"> 
+	</div>
+		</form>
+
+	</p>
 
 <?php
 if (isset($_GET['submit'])) {
-	if ($_GET['search'] == "") { //Eerst kijken of er wat is ingevoerd
+	if ($_GET['search'] == "") { //Eerst kijken of er wat is ingevoerd. Anders krijg je melding dat er niets is ingevoerd
 		echo "<font style='color:red'>Voer een zoekopdracht in</font>";  
 	} else {
-		$search = mysqli_real_escape_string($link, $_GET['search']);
-		$field = mysqli_real_escape_string($link, $_GET['field']);
+		$search = mysql_real_escape_string($_GET['search'],$link );
+		//Zoekopdracht
 		
-		 //In producten zoeken
+		 //Met query in producten zoeken
 			$query = "	SELECT * 
 						FROM Product 
 						WHERE Product_number LIKE '%$search%' 
@@ -54,10 +42,12 @@ if (isset($_GET['submit'])) {
 						OR In_stock LIKE '%$search%' 
 						OR Catagory LIKE '%$search%' 
 						";
-			$result = mysqli_query($link, $query);
-			$numrows = mysqli_num_rows($result);
-
+			$result = mysql_query($query, $link); //De query samen met database linken en in variable drukken
+			$numrows = mysql_num_rows($result); 
+			//Hier heb je een werkende query met (meerdere) waarde(s) in variable gedrukt.
+		
 			if ($numrows >= 1) { ?>
+		<div class="6u$ 12u$(medium)">
 			<div class="table-wrapper">
 				<p>
 				Gevonden resultaten:
@@ -65,38 +55,48 @@ if (isset($_GET['submit'])) {
 				<table class="alt">
 					<thead>
 					<tr>
-						<th>Productnumber</th>
-						<th>Productname</th>
+						<th>Productnr.</th>
+						<th>Name</th>
 						<th>Description</th>
-						<th>Price in euros</th>
+						<th>Price</th>
 						<th>In stock</th>
 						<th>Catagory</th>
+						<th>test</th>
 				  	</tr>
 					</thead>
 					<tbody>
-				<?php while ($row = mysqli_fetch_assoc($result)) { ?>
+				<?php while ($row = mysql_fetch_assoc($result)) { 
+					// Hier word de resultaat van hierboven ergens query in een assoc array afgedrukt. 	?> 
 					<tr>
 						<td><?php echo $row['Product_number']; ?>		</td>
 						<td><?php echo $row['Product_name']; ?>			</td>
 						<td><?php echo $row['Description']; ?>			</td>
 						<td><?php echo $row['Price']; ?>				</td>
 						<td><?php echo $row['In_stock']; ?>				</td>
-						<td><?php echo $row['Catagory']; ?>				</td>	
+						<td><?php echo $row['Catagory']; ?>				</td>
+						<td>
+							<div>
+						<input type="text" size="2" value="1" name="quantity">
+						<input class="button special" type="submit" value="Add to cart">
+							</div>	
+						</td>
 			   		</tr>
 
 				 </tbody>
 				<?php
-				}
+				} // einde while om resultaten af te drukken
 			} else {
-				echo "Geen resultaten voor \"<b>$search</b>\" in <b>$field</b>."; 
-			}	
+				echo "Geen resultaten voor \"<b>$search</b>\" in <b>$field</b>."; // Als er niets wordt gevonden krijg je deze melding
+			} // einde else als er GEEN resultaten zijn gevonden	
 		 ?>
 		 </div> 
+ 	</div>
+	</div>
 		 <?php
-	}
-}
+	} // einde else zoekfunctie. Dit is in een else omdat in de eerste if word gecontroleerd of er wel iets is ingevoerd.
+} // einde if/else van complete zoekfunctie
 ?>
 
-</table>
+			</table>
 </body>
 </html>
