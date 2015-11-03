@@ -83,7 +83,6 @@
  
  <!-- STATUS RADIO BUTTONS -->
 
-<<<<<<< HEAD
 			<LEGEND><b>State of product:</b></LEGEND>
 			<div class="4u 12u$(small)">
 				<input type="radio" id="new" name="state">
