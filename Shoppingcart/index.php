@@ -92,7 +92,7 @@ if(isset($_SESSION["cart_item"])){
   <?php
 }
 ?>
-</div>
+<!--</div>
 
 <div class="features">
 	<div class="feature">
@@ -118,5 +118,5 @@ if(isset($_SESSION["cart_item"])){
 	}
 	?>
 	</div>
-</div>
+</div> -->
 </BODY>
