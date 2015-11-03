@@ -17,37 +17,21 @@
 			echo getImgTag("computericon", 150);
 			echo getImgTag("tvicon", 150);
 			echo getImgTag("radioicon", 150);
+			$desto = "location.href='../Product_overview_TEST/Zoeken.php";
+			if (isset($_GET['submit'])){
+				if ($_GET['submit'] == "Sell a Product"){
+					$desto = "location.href='product_buy_page.php";
+				}
+			}
 		?>
 	</div>
-			<?php /*
-		if(array_key_exists("submit", $_GET) && $_GET["submit"] == "Buy a Product") {
-			echo "../Shoppingcart/index.php"; 
-		} else {
-			echo "details.php"; 
-		} 
-		?> " method="get">
-			<input id="catbutton" class="button special" type="submit" name="submit" value="Audio">
-			<input id="catbutton" class="button special" type="submit" name="submit" value="Phones">
-			<input id="catbutton" class="button special" type="submit" name="submit" value="Computer">
-			<input id="catbutton" class="button special" type="submit" name="submit" value="Television">
-			<input id="catbutton" class="button special" type="submit" name="submit" value="Radio">
-		} */
-		?>  
 	<div id="buttonBox">
 		<form id="categoryButtons" class="container" action="../Product_overview_TEST/Zoeken.php" method="post">
-<<<<<<< HEAD
-			<input class="catButton" type="submit" name="submit" value="Audio">
-			<input class="catButton" type="submit" name="submit" value="Phones">
-			<input class="catButton" type="submit" name="submit" value="Computer">
-			<input class="catButton" type="submit" name="submit" value="Television">
-			<input class="catButton" type="submit" name="submit" value="Radio">
-=======
-			<input id="catButton" class="button special" type="submit" name="submit" value="Audio">
-			<input id="catButton" class="button special" type="submit" name="submit" value="Phones">
-			<input id="catButton" class="button special" type="submit" name="submit" value="Computer">
-			<input id="catButton" class="button special" type="submit" name="submit" value="Television">
-			<input id="catButton" class="button special" type="submit" name="submit" value="Radio">
->>>>>>> 12b540df9606e78799ab31207afee47ccf4d4137
+			<input id="catButton" class="button special" type="button" name="submit" value="Audio" onclick="<?php echo $desto . "?search=audio&submit=true';" ?>">
+			<input id="catButton" class="button special" type="button" name="submit" value="Phones" onclick="<?php echo $desto . "?search=phones&submit=true';" ?>">
+			<input id="catButton" class="button special" type="button" name="submit" value="Computer" onclick="<?php echo $desto . "?search=computer&submit=true';" ?>">
+			<input id="catButton" class="button special" type="button" name="submit" value="Television" onclick="<?php echo $desto . "?search=television&submit=true';"?>">
+			<input id="catButton" class="button special" type="button" name="submit" value="Radio" onclick="<?php echo $desto . "?search=radio&submit=true';" ?>">
 		</form>
 	</div>
 </div>
@@ -56,6 +40,6 @@
 	addStyle("#groupBox {text-align: center;vertical-align:middle;}");
 	addStyle("#imageBox {text-align: center;}");
 	addStyle("#buttonBox {text-align: center;}");
-	addStyle(".catbutton {width:145px;}");
+	addStyle("#catbutton {width:145px;}");
 	generateFoot();
 ?>
