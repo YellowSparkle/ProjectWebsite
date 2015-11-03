@@ -2,6 +2,7 @@
    	require "../utility/HTMLGenerator.php";
 	require "../utility/Header.php";
 	
+	
 	generateTitle("Order complete");
 	generateHeader();
 ?>
@@ -82,16 +83,32 @@
  
  <!-- STATUS RADIO BUTTONS -->
 
-			<LEGEND><b>State of product:</b></LEGEND>
-			<div class="4u 12u$(small)">
-				<input type="radio" id="new" name="new">
-				<label for="new">New</label>              
+			<from><LEGEND><b>State of product:</b></LEGEND>
+			<div class="row.uniform>
+				<div class="4u 12u$(small)"><input type="radio" id="new" name="new">
+				<label for="new">New</label>    </div>          
   				
   				<input type="radio" id="second_hand" name="second_hand">
 				<label for="second_hand">Second hand</label> 
 				</div> 
 				
-				</div>
+			</div></form>
+			
+										<form method="post" action="#">
+								<div class="row uniform">
+									<div class="4u 12u$(small)">
+										<input type="radio" id="priority-low" name="priority" checked>
+										<label for="priority-low">Low Priority</label>
+									</div>
+									<div class="4u 12u$(small)">
+										<input type="radio" id="priority-normal" name="priority">
+										<label for="priority-normal">Normal Priority</label>
+									</div>
+									<div class="4u$ 12u$(small)">
+										<input type="radio" id="priority-high" name="priority">
+										<label for="priority-high">High Priority</label>
+									</div>
+							</form>
  <!--------------------------> 
 </body>
 	
