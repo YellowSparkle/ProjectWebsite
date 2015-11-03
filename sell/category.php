@@ -17,12 +17,6 @@
 			echo getImgTag("computericon", 150);
 			echo getImgTag("tvicon", 150);
 			echo getImgTag("radioicon", 150);
-			$desto = "location.href='../Product_overview_TEST/Zoeken.php";
-			if (isset($_GET['submit'])){
-				if ($_GET['submit'] == "Sell a Product"){
-					$desto = "location.href='product_buy_page.php";
-				}
-			}
 		?>
 	</div>
 	<div id="buttonBox">

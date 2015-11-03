@@ -1,38 +1,10 @@
 <?php
-include "../include.php";
-//Hier staat de connectie e.d. in
-require_once "../utility/HTMLGenerator.php";
-//Geen idee
-require_once "../utility/Header.php";
-//De header erbij betrekken
-generateTitle("Search");
-//Titel bovenaan de pagina
-generateHeader();
-
-require_once ("../Shoppingcart/dbcontroller.php");
-$db_handle = new DBController();
-if ((!empty($_GET["action"])) and $_GET["action"] == "add") {
-	if (!empty($_POST["quantity"])) {
-		$productByCode = $db_handle -> runQuery("SELECT * FROM Product WHERE Product_number='" . $_GET["code"] . "'");
-		$itemArray = array($productByCode[0]["Product_number"] => array('Product_name' => $productByCode[0]["Product_name"], 'Product_number' => $productByCode[0]["Product_number"], 'quantity' => $_POST["quantity"], 'Price' => $productByCode[0]["Price"]));
-
-		if (!empty($_SESSION["cart_item"])) {
-			if (array_key_exists($productByCode[0]["Product_number"], $_SESSION["cart_item"])) {
-				foreach ($_SESSION["cart_item"] as $k => $v) {
-					if ($productByCode[0]["Product_number"] == $k) {
-						$_SESSION["cart_item"][$k]["quantity"] = $_POST["quantity"] + $_SESSION["cart_item"][$k]["quantity"];
-					}
-				}
-			} else {
-				foreach ($itemArray as $key => $value) {
-					$_SESSION["cart_item"][$key] = $value;
-				}
-			}
-		} else {
-			$_SESSION["cart_item"] = $itemArray;
-		}
-	}
-}
+    include "../include.php";                        //Hier staat de connectie e.d. in
+    require_once "../utility/HTMLGenerator.php";    //Geen idee
+    require_once "../utility/Header.php";             //De header erbij betrekken
+    generateTitle("Search");                         //Titel bovenaan de pagina
+    generateHeader();                                
+    
 ?>
 
 <html>
