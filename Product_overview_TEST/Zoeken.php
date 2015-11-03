@@ -42,19 +42,19 @@ if (isset($_GET['submit'])) {
         		$category = mysql_real_escape_string($_GET['category'],$link );
 				 $query = "  SELECT * 
 	                        FROM Product 
-	                        WHERE Catagory = '$category'";
+	                        WHERE Category = '$category'";
 	                        
 				}else{
 					 $search = mysql_real_escape_string($_GET['search'],$link );
         		$category = mysql_real_escape_string($_GET['category'],$link );
 				 $query = "  SELECT * 
 	                        FROM Product 
-	                        WHERE Catagory = '$category'
+	                        WHERE Category = '$category'
 	                        AND ( Product_name LIKE '%$search%' 
 	                        OR Description LIKE '%$search%' 
 	                        OR Price LIKE '%$search%' 
 	                        OR In_stock LIKE '%$search%' 
-	                        OR Catagory LIKE '%$search%' )
+	                        OR Category LIKE '%$search%' )
 	                        ";
        			}
 			
@@ -81,7 +81,7 @@ if (isset($_GET['submit'])) {
 							<th>Description</th>
 							<th>Price</th>
 							<th>In stock</th>
-							<th>Catagory</th>
+							<th>Category</th>
 							<th>Amount</th>
 							<th>Add to cart</th>
 						</tr>
@@ -96,8 +96,8 @@ if (isset($_GET['submit'])) {
 							<td><?= $row['Description'] ?></td>
 							<td><?= $row['Price'] ?></td>
 							<td><?= $row['In_stock'] ?></td>
-							<td><?= $row['Catagory'] ?></td>
-							<td class="fuckxavier">
+							<td><?= $row['Category'] ?></td>
+							<td class="joost">
 							<input type="text" size="2" value="1" name="quantity">
 							</td>
 							<td>
