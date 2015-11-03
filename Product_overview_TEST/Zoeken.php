@@ -1,10 +1,13 @@
 <?php
-    include "../include.php";                        //Hier staat de connectie e.d. in
-    require_once "../utility/HTMLGenerator.php";    //Geen idee
-    require_once "../utility/Header.php";             //De header erbij betrekken
-    generateTitle("Search");                         //Titel bovenaan de pagina
-    generateHeader();                                
-    
+include "../include.php";
+//Hier staat de connectie e.d. in
+require_once "../utility/HTMLGenerator.php";
+//Geen idee
+require_once "../utility/Header.php";
+//De header erbij betrekken
+generateTitle("Search");
+//Titel bovenaan de pagina
+generateHeader();
 ?>
 
 <html>
@@ -16,40 +19,49 @@
 				<div class="helemaallinksaapje"></div>
 				<div class="linksaapje">
 					<form name="search" method="get" action="">
+						<input type="hidden" name="category" value="<?= $_GET["category"] ?>" id="category"/>
 						<!--Hier voer je de zoekopdracht in. In de browser-->
 						Zoek op:
 						<input class="zoekbox" type="text" name="search" autocomplete="off" id="" value="">
 						<br>
 						<input type="submit" name="submit" value="Zoeken">
-
 					</form>
 				</div>
 		</p>
 
 		<?php
-
 if (isset($_GET['submit'])) {
-if ($_GET['search'] == "") { //Eerst kijken of er wat is ingevoerd. Anders krijg je melding dat er niets is ingevoerd
-echo "<font style='color:red'>Voer een zoekopdracht in</font>";
-} else {
-$search = mysql_real_escape_string($_GET['search'],$link );
-//Zoekopdracht
-
-//Met query in producten zoeken
-$query = "  SELECT *
-FROM Product
-WHERE Product_number LIKE '%$search%'
-OR Product_name LIKE '%$search%'
-OR Description LIKE '%$search%'
-OR Price LIKE '%$search%'
-OR In_stock LIKE '%$search%'
-OR Catagory LIKE '%$search%'
-";
-$result = mysql_query($query, $link); //De query samen met database linken en in variable drukken
-$numrows = mysql_num_rows($result);
-//Hier heb je een werkende query met (meerdere) waarde(s) in variable gedrukt.
-
-if ($numrows >= 1) {
+        
+        //Zoekopdracht
+        	if(isset($_GET['category'])){
+        		if(!isset($_GET['search'])){
+        		$category = mysql_real_escape_string($_GET['category'],$link );
+				 $query = "  SELECT * 
+	                        FROM Product 
+	                        WHERE Category = '$category'";
+	                        
+				}else{
+					 $search = mysql_real_escape_string($_GET['search'],$link );
+        		$category = mysql_real_escape_string($_GET['category'],$link );
+				 $query = "  SELECT * 
+	                        FROM Product 
+	                        WHERE Category = '$category'
+	                        AND ( Product_name LIKE '%$search%' 
+	                        OR Description LIKE '%$search%' 
+	                        OR Price LIKE '%$search%' 
+	                        OR In_stock LIKE '%$search%' 
+	                        OR Category LIKE '%$search%' )
+	                        ";
+       			}
+			
+            	$result = mysql_query($query, $link); //De query samen met database linken en in variable drukken
+           	
+            	$numrows = mysql_num_rows($result); 
+            //Hier heb je een werkende query met (meerdere) waarde(s) in variable gedrukt.
+            
+           // ($numrows >= 1)?"test":"niet test";
+        
+            	if ($numrows >= 1) {
 		?>
 		<div class="rechtsaapje">
 			<div class="table-wrapper">
@@ -64,7 +76,7 @@ if ($numrows >= 1) {
 							<th>Description</th>
 							<th>Price</th>
 							<th>In stock</th>
-							<th>Catagory</th>
+							<th>Category</th>
 							<th>Amount</th>
 							<th>Add to cart</th>
 						</tr>
@@ -74,35 +86,30 @@ if ($numrows >= 1) {
 // Hier word de resultaat van hierboven ergens query in een assoc array afgedrukt.
 						?>
 						<tr>
-							<form method="post" action="Zoeken.php?action=add&code=<?php echo $row['Product_number']; ?>">
-							<td><?php echo $row['Product_number']; ?></td>
-							<td><?php echo $row['Product_name']; ?></td>
-							<td><?php echo $row['Description']; ?></td>
-							<td><?php echo $row['Price']; ?></td>
-							<td><?php echo $row['In_stock']; ?></td>
-							<td><?php echo $row['Catagory']; ?></td>
-							<td class="fuckxavier">
+							<td><?= $row['Product_number'] ?></td>
+							<td><?= $row['Product_name'] ?></td>
+							<td><?= $row['Description'] ?></td>
+							<td><?= $row['Price'] ?></td>
+							<td><?= $row['In_stock'] ?></td>
+							<td><?= $row['Category'] ?></td>
+							<td class="joost">
 							<input type="text" size="2" value="1" name="quantity">
 							</td>
 							<td>
 							<input class="button special" type="submit" value="Add to cart">
 							</td>
-							</form>
 						</tr>
 					</tbody>
-					<?php
-					} // einde while om resultaten af te drukken
-					} else {
-					echo "Geen resultaten voor ".$search."."; // Als er niets wordt gevonden krijg je deze melding
-					} // einde else als er GEEN resultaten zijn gevonden
-					?>
 			</div>
 		</div>
 		</div>
 		<?php
-		} // einde else zoekfunctie. Dit is in een else omdat in de eerste if word gecontroleerd of er wel iets is ingevoerd.
+			}
+		}// einde else zoekfunctie. Dit is in een else omdat in de eerste if word gecontroleerd of er wel iets is ingevoerd.
+		}
 		} // einde if/else van complete zoekfunctie
-		?>
+	?>
+
 
 		</table>
 	</body>
