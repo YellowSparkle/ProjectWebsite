@@ -83,16 +83,16 @@
  
  <!-- STATUS RADIO BUTTONS -->
 
-			<from><LEGEND><b>State of product:</b></LEGEND>
-			<div class="row.uniform>
-				<div class="4u 12u$(small)"><input type="radio" id="new" name="new">
-				<label for="new">New</label>    </div>          
-  				
-  				<input type="radio" id="second_hand" name="second_hand">
-				<label for="second_hand">Second hand</label> 
-				</div> 
-				
-			</div></form>
+			<LEGEND><b>State of product:</b></LEGEND>
+			<div class="4u 12u$(small)">
+				<input type="radio" id="new" name="state">
+				<label for="new">New</label>
+			</div>
+			<div class="4u$ 12u$(small)">
+				<input type="radio" id="secondhand" name="state">
+				<label for="secondhand">Second Hand</label>
+			</div>
+				</div>
 			
 										<form method="post" action="#">
 								<div class="row uniform">
@@ -109,6 +109,7 @@
 										<label for="priority-high">High Priority</label>
 									</div>
 							</form>
+
  <!--------------------------> 
 </body>
 	

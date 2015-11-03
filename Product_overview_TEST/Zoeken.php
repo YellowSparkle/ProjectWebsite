@@ -8,13 +8,11 @@ require_once "../utility/Header.php";
 generateTitle("Search");
 //Titel bovenaan de pagina
 generateHeader();
+if (!isset($_GET["category"])) {
+	$_GET["category"] = "audio";
+}
 ?>
-
-<html>
-	<head></head>
-	<body>
-
-		<p>
+<p>
 			<div class="row 200%">
 				<div class="helemaallinksaapje"></div>
 				<div class="linksaapje">
@@ -104,13 +102,10 @@ if (isset($_GET['submit'])) {
 		</div>
 		</div>
 		<?php
-			}
+		}
 		}// einde else zoekfunctie. Dit is in een else omdat in de eerste if word gecontroleerd of er wel iets is ingevoerd.
 		}
 		} // einde if/else van complete zoekfunctie
 	?>
 
-
-		</table>
-	</body>
-</html>
+</table>
