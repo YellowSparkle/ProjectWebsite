@@ -25,14 +25,9 @@
       <form method="post" action="../utility/Login.php">
         <p><input type="text" name="login" value="" placeholder="Email"></p>
         <p><input type="password" name="password" value="" placeholder="Password"></p>
-        <p class="remember_me">
-          <label>
-            <input type="checkbox" name="remember_me" id="remember_me">
-            Stay logged in.
-          </label>
           <label><a href="../Registreren_pagina/Register_page.php"><font size="2">Don't have an account yet ? Register here!</font></a></label>
         </p>
-        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+        <input class="button special" type="submit" value="login">
       </form>
       <?php if (array_key_exists("loginerr", $_GET)){ echo "<font color='red'>* Invalid username or password *</font>"; } ?>
      </div> <!-- end login div -->

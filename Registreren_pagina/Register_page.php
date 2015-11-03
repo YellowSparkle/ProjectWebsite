@@ -2,7 +2,6 @@
 	require_once "../utility/HTMLGenerator.php";
 	require_once "../utility/Header.php";
 	
-	session_start();
 	
 	generateTitle("Registration");
 	generateHeader();
