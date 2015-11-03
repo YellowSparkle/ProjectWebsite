@@ -33,17 +33,9 @@ generateHeader();
 
 
 if (isset($_GET['submit'])) {
-<<<<<<< HEAD
-     
-       
-	
-	
-=======
-    if ($_GET['search'] == "") { //Eerst kijken of er wat is ingevoerd. Anders krijg je melding dat er niets is ingevoerd
-        echo "<font style='color:red'>Enter a search command</font>";  
-    } else {
-        $search = mysql_real_escape_string($_GET['search'],$link );
->>>>>>> c6579a899e1a87feabdae87a01b1556d7a3d107b
+
+        
+
         //Zoekopdracht
         	if(isset($_GET['category'])){
         		if(!isset($_GET['search'])){
@@ -66,15 +58,15 @@ if (isset($_GET['submit'])) {
 	                        ";
        			}
 			
-            $result = mysql_query($query, $link); //De query samen met database linken en in variable drukken
-           
-            $numrows = mysql_num_rows($result); 
+            	$result = mysql_query($query, $link); //De query samen met database linken en in variable drukken
+           	
+            	$numrows = mysql_num_rows($result); 
             //Hier heb je een werkende query met (meerdere) waarde(s) in variable gedrukt.
             
            // ($numrows >= 1)?"test":"niet test";
         
-<<<<<<< HEAD
-            if ($numrows >= 1) {
+
+            	if ($numrows >= 1) {
 		?>
 		<div class="rechtsaapje">
 			<div class="table-wrapper">
@@ -118,59 +110,11 @@ if (isset($_GET['submit'])) {
 		</div>
 		<?php
 			}
+		}// einde else zoekfunctie. Dit is in een else omdat in de eerste if word gecontroleerd of er wel iets is ingevoerd.
+		}
 		} // einde if/else van complete zoekfunctie
-		}
-		}
-		?>
-=======
-            if ($numrows >= 1) { ?>
-        <div class="rechtsaapje">
-            <div class="table-wrapper">
-                <p>
-                Found results:
-                </p>
-                <table class="alt" style="margin-right: 2cm;">
-                    <thead>
-                    <tr>
-                        <th>Productnr.</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>In stock</th>
-                        <th>Catagory</th>
-                        <th>Amount</th>
-                        <th>Add to cart</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                <?php while ($row = mysql_fetch_assoc($result)) { 
-                    // Hier word de resultaat van hierboven ergens query in een assoc array afgedrukt.     ?> 
-                    <tr>
-                        <td><?php echo $row['Product_number']; ?>                                </td>
-                        <td><?php echo $row['Product_name']; ?>                                    </td>
-                        <td><?php echo $row['Description']; ?>                                    </td>
-                        <td><?php echo $row['Price']; ?>                                        </td>
-                        <td><?php echo $row['In_stock']; ?>                                        </td>
-                        <td><?php echo $row['Catagory']; ?>                                        </td>
-                        <td class="fuckxavier"><input type="text" size="2" value="1" name="quantity">    </td>
-                        <td><input class="button special" type="submit" value="Add to cart">    </td>    
-                       </tr>
+	?>
 
-                 </tbody>
-                <?php
-                } // einde while om resultaten af te drukken
-            } else {
-                echo "No results were found for ".$search."."; // Als er niets wordt gevonden krijg je deze melding
-            } // einde else als er GEEN resultaten zijn gevonden    
-         ?>
-         </div> 
-     </div>
-    </div>
-         <?php
-    } // einde else zoekfunctie. Dit is in een else omdat in de eerste if word gecontroleerd of er wel iets is ingevoerd.
-} // einde if/else van complete zoekfunctie
-?>
->>>>>>> c6579a899e1a87feabdae87a01b1556d7a3d107b
 
 		</table>
 	</body>
