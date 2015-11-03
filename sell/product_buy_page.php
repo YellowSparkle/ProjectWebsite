@@ -7,7 +7,6 @@
 ?>
 <html lang="en">
 	<head>
-		<title>Sell your product</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<link rel="stylesheet" href="../utility/assets/css/main.css" />
@@ -55,27 +54,34 @@
 
 
 <!-- SELECT BRAND DROP DOWN-->
-<LEGEND><b>Pick a brand:</b></LEGEND>
-<select style="width: 160px !important; min-width: 160px; max-width: 160px;">
-<option value="Pick_brand">Pick a brand</option>
+
 <?php
-		if(array_key_exists("submit", $_GET) && $_GET["submit"] == "Phones")
+		if (isset($_POST['submit']))
+		{
+			if ($_POST['submit'] == "Phones")
 			{
 			?>
-				  <option value="Samsung">Samsung</option>
-				  <option value="Nokia">Nokia</option>
-				  <option value="Apple">Apple</option>
-				</select>
+				<LEGEND><b>Pick a brand:</b></LEGEND>
+				<select style='width: 160px !important; min-width: 160px; max-width: 160px;'>
+				<option value='Select a brand'>Pick a brand</option>
+				<option value='Samsung'>Samsung</option>
+				<option value='Nokia'>Nokia</option>
+				<option value='Apple'>Apple</option>
+				</select>"?>
 			<?php
 			}
+		}
 			
-		if(array_key_exists("submit", $_GET) && $_GET["submit"] == "Audio")
+		if(array_key_exists("button", $_GET) && $_GET["button"] == "Audio") // Audio 
 			{
 			?>
 				  <option value="Samsung">Seinheizer</option>
 				  <option value="Nokia">Sony</option>
 				  <option value="Apple">phillips</option>
 				</select>
+				<?php
+			}
+			?>
  <!-------------------------->
  
  <!-- PRICE TEXTBOX -->
