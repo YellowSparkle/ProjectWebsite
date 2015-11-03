@@ -35,11 +35,19 @@
 		?>  
 	<div id="buttonBox">
 		<form id="categoryButtons" class="container" action="../Product_overview_TEST/Zoeken.php" method="post">
+<<<<<<< HEAD
 			<input class="catButton" type="submit" name="submit" value="Audio">
 			<input class="catButton" type="submit" name="submit" value="Phones">
 			<input class="catButton" type="submit" name="submit" value="Computer">
 			<input class="catButton" type="submit" name="submit" value="Television">
 			<input class="catButton" type="submit" name="submit" value="Radio">
+=======
+			<input id="catButton" class="button special" type="submit" name="submit" value="Audio">
+			<input id="catButton" class="button special" type="submit" name="submit" value="Phones">
+			<input id="catButton" class="button special" type="submit" name="submit" value="Computer">
+			<input id="catButton" class="button special" type="submit" name="submit" value="Television">
+			<input id="catButton" class="button special" type="submit" name="submit" value="Radio">
+>>>>>>> 12b540df9606e78799ab31207afee47ccf4d4137
 		</form>
 	</div>
 </div>
@@ -48,6 +56,6 @@
 	addStyle("#groupBox {text-align: center;vertical-align:middle;}");
 	addStyle("#imageBox {text-align: center;}");
 	addStyle("#buttonBox {text-align: center;}");
-	addStyle("#catbutton {width:145px;}");
+	addStyle(".catbutton {width:145px;}");
 	generateFoot();
 ?>
