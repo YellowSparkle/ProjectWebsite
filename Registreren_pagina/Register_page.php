@@ -46,6 +46,8 @@
 		<li>*Re-type password</li>
 		<li><input name="password_check" type="password" size="50" value="<?php password_check() ?>"></li>
 		
+		<br>
+		
 		<li><input type="reset" value="Begin opnieuw"> <input type="submit" name="versturen" value="Verstuur bericht"></li>
 		<p>
 			All fields with * must be filled in correctly.
