@@ -2,21 +2,19 @@
 <html lang="en">
 	<head>		
 		<title>Login</title>
-		<meta charset="utf-8">
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<link rel="stylesheet" href="../utility/assets/css/main.css" />
 	</head>
 	<body>
 
-<div class="relative">
+<div  class="features">
 	<form action="processing_payment.php" method="post">
 	<!--
 		Username:	 <input type="text" name="username" value=""/>  <br />
 		Password:	 <input type="password" name="password" value=""/> <br />
 	-->
+	
+	<br><br><br>
+	<img src="../img/Yes-Bank-Logo.png" alt="Logo""> <br><br>
 		 <label for="username">Username</label> <!-- Username text box  -->
   	 	<input type="text" id="username" />
   	 	<br />
