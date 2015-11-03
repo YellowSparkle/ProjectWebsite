@@ -19,12 +19,13 @@
 			echo getImgTag("radioicon", 150);
 		?>
 	</div>
-			<?php /*
+			<?php 
 		if(array_key_exists("submit", $_GET) && $_GET["submit"] == "Buy a Product") {
 			echo "../Shoppingcart/index.php"; 
 		} else {
-			echo "details.php"; 
+			echo "product_buy_page.php"; 
 		} 
+		/*
 		?> " method="get">
 			<input id="catbutton" class="button special" type="submit" name="submit" value="Audio">
 			<input id="catbutton" class="button special" type="submit" name="submit" value="Phones">
