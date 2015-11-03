@@ -25,6 +25,8 @@
     </p>
 
 <?php
+
+
 if (isset($_GET['submit'])) {
     if ($_GET['search'] == "") { //Eerst kijken of er wat is ingevoerd. Anders krijg je melding dat er niets is ingevoerd
         echo "<font style='color:red'>Voer een zoekopdracht in</font>";  
