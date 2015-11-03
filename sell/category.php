@@ -27,11 +27,11 @@
 	</div>
 	<div id="buttonBox">
 		<form id="categoryButtons" class="container" action="../Product_overview_TEST/Zoeken.php" method="post">
-			<input id="catButton" class="button special" type="button" name="submit" value="Audio" onclick="<?php echo $desto . "?category=audio&submit=true';" ?>">
-			<input id="catButton" class="button special" type="button" name="submit" value="Phones" onclick="<?php echo $desto . "?category=phones&submit=true';" ?>">
-			<input id="catButton" class="button special" type="button" name="submit" value="Computer" onclick="<?php echo $desto . "?category=computers&submit=true';" ?>">
-			<input id="catButton" class="button special" type="button" name="submit" value="Television" onclick="<?php echo $desto . "?category=television&submit=true';"?>">
-			<input id="catButton" class="button special" type="button" name="submit" value="Radio" onclick="<?php echo $desto . "?category=radio&submit=true';" ?>">
+			<input id="catButton" class="button special" type="button" name="submit" value="Audio" onclick="<?= $desto . "?category=audio&submit=true';" ?>">
+			<input id="catButton" class="button special" type="button" name="submit" value="Phones" onclick="<?= $desto . "?category=phones&submit=true';" ?>">
+			<input id="catButton" class="button special" type="button" name="submit" value="Computer" onclick="<?= $desto . "?category=computers&submit=true';" ?>">
+			<input id="catButton" class="button special" type="button" name="submit" value="Television" onclick="<?= $desto . "?category=television&submit=true';"?>">
+			<input id="catButton" class="button special" type="button" name="submit" value="Radio" onclick="<?= $desto . "?category=radio&submit=true';" ?>">
 		</form>
 	</div>
 </div>
