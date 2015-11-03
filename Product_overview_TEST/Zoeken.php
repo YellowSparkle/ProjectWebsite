@@ -29,7 +29,7 @@
 
 if (isset($_GET['submit'])) {
     if ($_GET['search'] == "") { //Eerst kijken of er wat is ingevoerd. Anders krijg je melding dat er niets is ingevoerd
-        echo "<font style='color:red'>Voer een zoekopdracht in</font>";  
+        echo "<font style='color:red'>Enter a search command</font>";  
     } else {
         $search = mysql_real_escape_string($_GET['search'],$link );
         //Zoekopdracht
@@ -52,7 +52,7 @@ if (isset($_GET['submit'])) {
         <div class="rechtsaapje">
             <div class="table-wrapper">
                 <p>
-                Gevonden resultaten:
+                Found results:
                 </p>
                 <table class="alt" style="margin-right: 2cm;">
                     <thead>
@@ -85,7 +85,7 @@ if (isset($_GET['submit'])) {
                 <?php
                 } // einde while om resultaten af te drukken
             } else {
-                echo "Geen resultaten voor ".$search."."; // Als er niets wordt gevonden krijg je deze melding
+                echo "No results were found for ".$search."."; // Als er niets wordt gevonden krijg je deze melding
             } // einde else als er GEEN resultaten zijn gevonden    
          ?>
          </div> 
