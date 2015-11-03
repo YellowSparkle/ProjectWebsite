@@ -24,7 +24,6 @@
 			echo "../Shoppingcart/index.php"; 
 		} else {
 			echo "details.php"; 
-<<<<<<< HEAD
 		} 
 		?> " method="get">
 			<input id="catbutton" class="button special" type="submit" name="submit" value="Audio">
@@ -32,7 +31,6 @@
 			<input id="catbutton" class="button special" type="submit" name="submit" value="Computer">
 			<input id="catbutton" class="button special" type="submit" name="submit" value="Television">
 			<input id="catbutton" class="button special" type="submit" name="submit" value="Radio">
-=======
 		} */
 		?>  
 	<div id="buttonBox">
@@ -42,7 +40,6 @@
 			<input class="catButton" type="submit" name="submit" value="Computer">
 			<input class="catButton" type="submit" name="submit" value="Television">
 			<input class="catButton" type="submit" name="submit" value="Radio">
->>>>>>> 5d092afa50e4a72b95e5dfaa159f8b4b10e7cc4c
 		</form>
 	</div>
 </div>
