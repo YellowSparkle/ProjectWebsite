@@ -22,10 +22,12 @@
 		<ul class="checkbox">
 		<fieldset width: 100%;>
 		-->
+		<div class ="div.general" >
 			<LEGEND><b>Product includes a working:</b></LEGEND>
 			  
 			  	<div class="6u 12u$(small)">
-			  		<li></li>
+			  		<div class ="div.general" >
+			  		<li>
 					<input type="checkbox" id="Charger" name="Charger">
 					<label for="Charger">Charger</label>
 					</li><li>				
@@ -55,33 +57,14 @@
 
 <!-- SELECT BRAND DROP DOWN-->
 
-<?php
-		if (isset($_POST['submit']))
-		{
-			if ($_POST['submit'] == "Phones")
-			{
-			?>
+
 				<LEGEND><b>Pick a brand:</b></LEGEND>
 				<select style='width: 160px !important; min-width: 160px; max-width: 160px;'>
 				<option value='Select a brand'>Pick a brand</option>
 				<option value='Samsung'>Samsung</option>
 				<option value='Nokia'>Nokia</option>
 				<option value='Apple'>Apple</option>
-				</select>"?>
-			<?php
-			}
-		}
-			
-		if(array_key_exists("button", $_GET) && $_GET["button"] == "Audio") // Audio 
-			{
-			?>
-				  <option value="Samsung">Seinheizer</option>
-				  <option value="Nokia">Sony</option>
-				  <option value="Apple">phillips</option>
 				</select>
-				<?php
-			}
-			?>
  <!-------------------------->
  
  <!-- PRICE TEXTBOX -->
@@ -93,12 +76,11 @@
   <!-- DICRIPTION TEXTBOX -->
 
 			<LEGEND><b>Product discription:</b></LEGEND>
-				<textarea name="Text1" cols="60" rows="5"></textarea>
+				<textarea name="Text1" style="width:500px;" cols="40" rows="5"></textarea>
 	
  <!-------------------------->
  
-
-  <!-- STATUS RADIO BUTTONS -->
+ <!-- STATUS RADIO BUTTONS -->
 
 			<LEGEND><b>State of product:</b></LEGEND>
 			<div class="4u 12u$(small)">
@@ -108,6 +90,8 @@
   				<input type="radio" id="second_hand" name="second_hand">
 				<label for="second_hand">Second hand</label> 
 				</div> 
+				
+				</div>
  <!--------------------------> 
 </body>
 	
@@ -153,6 +137,11 @@
 		  top: 86%;
 		  left: 12%; 
 		  border solid 3px color: red;
+		}
+		div.general
+		{
+		position: absolute
+		left: 50px	
 		}
 	</style>
 	 <!-------------------------->
