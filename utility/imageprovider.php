@@ -17,7 +17,7 @@
 		if (array_key_exists($name, $imageArray)){
 			return $imageArray[$name];
 		} else {
-			return $imageArray["company-name-vector-logo2"];
+			return $imageArray["noimg"];
 		}
 	}
 	
