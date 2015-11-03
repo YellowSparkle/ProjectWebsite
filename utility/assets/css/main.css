@@ -1,8 +1,70 @@
-/*
-    Typify by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
+
+/* Meuk voor Buy_page (ivo)*/
+
+
+	div.linksffs 
+	{
+    width: 20%;
+    text-align:left;
+	}
+	
+	div.linksnu 
+	{
+    margin:5%;
+    }
+    
+	div.rechtsffs 
+	{
+    margin: -10% 0 0 10%;
+    }
+    
+    
+	 div.general
+        {
+        position: absolute
+        left: 30% 
+        }
+      
+	div.checkboxes_working
+		{
+		  position: absolute;   
+		  top: 40%;
+		  left: 50%; 
+		  border solid 3px color: red;
+		  
+		}
+	
+	div.brand
+		{
+		  position: absolute;   
+		  top: 40%;
+		  left: 33%; 
+		  border solid 3px color: red;
+		}
+		
+	div.price
+		{
+		  position: absolute;   
+		  top: 53%;
+		  left: 33%; 
+		  border solid 3px color: red;
+		}
+				
+	div.status_product
+		{
+		  position: absolute;   
+		  top: 66%;
+		  left: 33%; 
+		  border solid 3px color: red;
+		}
+		
+	div.beschrijving
+		{
+		  position: absolute;   
+		  top: 86%;
+		  left: 12%; 
+		  border solid 3px color: red;
+		}
 
 /* start option page */
 
