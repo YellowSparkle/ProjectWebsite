@@ -93,17 +93,6 @@
 				<label for="secondhand">Second Hand</label>
 			</div>
 				</div>
-
-			<from><LEGEND><b>State of product:</b></LEGEND>
-			<div class="row.uniform>
-				<div class="4u 12u$(small)"><input type="radio" id="new" name="new">
-				<label for="new">New</label>    </div>          
-  				
-  				<input type="radio" id="second_hand" name="second_hand">
-				<label for="second_hand">Second hand</label> 
-				</div> 
-				
-			</div></form>
 			
 										<form method="post" action="#">
 								<div class="row uniform">
