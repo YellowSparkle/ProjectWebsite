@@ -55,14 +55,23 @@
 
 
 <!-- SELECT BRAND DROP DOWN-->
-
-			<LEGEND><b>Pick a brand:</b></LEGEND>
-			<select style="width: 160px !important; min-width: 160px; max-width: 160px;">
-	  		  <option value="Pick_brand">Pick a brand</option>
-			  <option value="Samsung">Samsung</option>
-			  <option value="Nokia">Nokia</option>
-			  <option value="Apple">Apple</option>
-			</select>
+<LEGEND><b>Pick a brand:</b></LEGEND>
+<select style="width: 160px !important; min-width: 160px; max-width: 160px;">
+<?php
+		if(array_key_exists("submit", $_GET) && $_GET["submit"] == "Phones")
+			{
+				?>
+		  		  <option value="Pick_brand">Pick a brand</option>
+				  <option value="Samsung">Samsung</option>
+				  <option value="Nokia">Nokia</option>
+				  <option value="Apple">Apple</option>
+				</select>
+				<?php
+			}
+			
+		if(array_key_exists("submit", $_GET) && $_GET["submit"] == "Audio")
+			{
+		?>
  <!-------------------------->
  
  <!-- PRICE TEXTBOX -->
