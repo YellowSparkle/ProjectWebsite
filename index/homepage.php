@@ -37,5 +37,9 @@
 </body>
 
 	<?php function invalid() {
-		if (array_key_exists("loginerr", $_GET)){ echo "<font color='red'>* Invalid username or password *</font>"; }
+		if (array_key_exists("loginerr", $_GET)){ echo "<font color='red'>* Invalid username or password *</font><br>"; }
+		if (isset($_SESSION['mustlogin'])){
+			 echo "<font color='red'> * You must be logged in *</font><br>";
+			 unset($_SESSION['mustlogin']);
+		}
 	} ?>

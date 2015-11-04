@@ -13,6 +13,10 @@ function generateHeader($loginbox = true, $logoutbox = true, $cartflip = NULL) {
 		echo "<input id=homebutton class='button special' type=button name='Home' value='Home' onclick=\"window.location.href='../sell/category.php'\">";
 	} else {
 		echo "<input id=homebutton class='button special' type=button name='Home' value='Home' onclick=\"window.location.href='../index/homepage.php'\">";
+		if (!isset($_SESSION['mustlogin'])){
+			echo "<meta http-equiv='refresh' content='0; url=../index/homepage.php' />";
+			$_SESSION["mustlogin"] = true;
+		}
 	}
 	// test img ( xavier )//
 	
