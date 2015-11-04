@@ -4,7 +4,7 @@
 	generateTitle("Order complete");
 	generateHeader();
 ?>
-<<<<<<< HEAD
+
 
 <html lang="en">
 	<head>
@@ -159,7 +159,7 @@
 			<option selected disabled hidden value='Select a brand'>Pick a brand</option>
 			<option value='Phillips'>Phillips</option>
 			<option value='Sony'>Sony</option>
-			<option value='Sennheizer'>Sennheizer</option>
+			<option value='Sennheiser'>Sennheiser</option>
 			<option value='Bosch'>Bosch</option>
 			<option value='Beats'>Beats</option>
 			<option value='Other'>Other</option>
@@ -192,6 +192,11 @@
 			<option selected disabled hidden value='Select a brand'>Pick a brand</option>
 			<option value='Audiosonic'>Audiosonic</option>
 			<option value='AKAI'>AKAI</option>
+			<option value='Philips'>Philips</option>
+			<option value='Sony'>Sony</option>
+			<option value='Ok.'>Ok.</option>
+			<option value='Soundmaster'>Soundmaster</option>
+			<option value='Konig'>Konig</option>
 			<option value='Other'>Other</option>
 			</select>";
 	}
