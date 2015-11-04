@@ -93,6 +93,10 @@
 		
 		$passcheck = true;
 		
+		if ($_POST["password"] != $_POST["password_check"]){
+			echo "* Passwords do not match<br>";	
+		}
+		
 		foreach ($errorkeys as $value) {
 			switch($value){
 				case "title":
