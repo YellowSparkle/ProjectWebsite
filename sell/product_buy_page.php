@@ -6,14 +6,8 @@
 	generateTitle("Order complete");
 	generateHeader();
 ?>
-<html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-		<link rel="stylesheet" href="../utility/assets/css/main.css" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
 	</head>
 
 <body>
@@ -61,84 +55,26 @@
 		
 		switch ($_GET['category']) {
 			case 'phones':
-				echo "
-					<div class='rechtsffs'>
-	           		<div class='table-wrapper'>
-					<LEGEND><b>Pick a brand:</b></LEGEND>
-					<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
-					<option selected disabled hidden value='Select a brand'>Pick a brand</option>
-					<option value='Samsung'>Samsung</option>
-					<option value='Nokia'>Nokia</option>
-					<option value='Apple'>Apple</option>
-					<option value='Blackberry'>Blackberry</option>
-					<option value='OnePlus'>OnePlus</option>
-					<option value='Motorola'>Motorola</option>
-					<option value='Other'>other</option>
-					</select>";
+				phones();
 				break;
-			
+				
 			case 'audio':
-				echo "
-					<div class='rechtsffs'>
-	           		<div class='table-wrapper'>
-					<LEGEND><b>Pick a brand:</b></LEGEND>
-					<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
-					<option selected disabled hidden value='Select a brand'>Pick a brand</option>
-					<option value='Phillips'>Phillips</option>
-					<option value='Sony'>Sony</option>
-					<option value='Sennheizer'>Sennheizer</option>
-					<option value='Bosch'>Bosch</option>
-					<option value='Beats'>Beats</option>
-					<option value='Other'>Other</option>
-					</select>";
+				audio();
 				break;
 				
 			case 'computers':
-				echo "
-					<div class='rechtsffs'>
-	           		<div class='table-wrapper'>
-					<LEGEND><b>Pick a brand:</b></LEGEND>
-					<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
-					<option selected disabled hidden value='Select a brand'>Pick a brand</option>
-					<option value='Intel'>Intel</option>
-					<option value='AMD'>AMD</option>
-					<option value='Nvidia'>Nvidia</option>
-					<option value='Kingston'>Kingston</option>
-					<option value='Alienware'>Alienware</option>
-					<option value='Imac'>Imac</option>
-					<option value='Other'>Other</option>
-					</select>";
+				computers();
 				break;
-			case 'radio':
-				echo "
-					<div class='rechtsffs'>
-	           		<div class='table-wrapper'>
-					<LEGEND><b>Pick a brand:</b></LEGEND>
-					<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
-					<option selected disabled hidden value='Select a brand'>Pick a brand</option>
-					<option value='Audiosonic'>Audiosonic</option>
-					<option value='AKAI'>AKAI</option>
-					<option value='Other'>Other</option>
-					</select>";
-				break;
-			case 'television':
-				echo "
-					<div class='rechtsffs'>
-	           		<div class='table-wrapper'>
-					<LEGEND><b>Pick a brand:</b></LEGEND>
-					<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
-					<option selected disabled hidden value='Select a brand'>Pick a brand</option>
-					<option value='Sony'>Sony</option>
-					<option value='Samsung'>Samsung</option>
-					<option value='Phillips'>Phillips</option>
-					<option value='LG'>LG</option>
-					<option value='Panasonic'>Panasonic</option>
-					<option value='Other'>Other</option>
-					</select>";
-				break;
-			default:
 				
+			case 'radio':
+				radio ();
 				break;
+				
+			case 'television':
+				television();
+				break;
+
+				
 		}?>	
      <!--   <div class="rechtsffs">
             <div class="table-wrapper">
@@ -189,4 +125,86 @@
 
  <!--------------------------> 
 </body>
-</html>
+
+
+<?php 
+	function phones() {
+		echo "
+			<div class='rechtsffs'>
+	      	<div class='table-wrapper'>
+			<LEGEND><b>Pick a brand:</b></LEGEND>
+			<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
+			<option selected disabled hidden value='Select a brand'>Pick a brand</option>
+			<option value='Samsung'>Samsung</option>
+			<option value='Nokia'>Nokia</option>
+			<option value='Apple'>Apple</option>
+			<option value='Blackberry'>Blackberry</option>
+			<option value='OnePlus'>OnePlus</option>
+			<option value='Motorola'>Motorola</option>
+			<option value='Other'>other</option>
+			</select>";
+	}			
+	
+	function audio() {
+		echo "
+			<div class='rechtsffs'>
+	        <div class='table-wrapper'>
+			<LEGEND><b>Pick a brand:</b></LEGEND>
+			<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
+			<option selected disabled hidden value='Select a brand'>Pick a brand</option>
+			<option value='Phillips'>Phillips</option>
+			<option value='Sony'>Sony</option>
+			<option value='Sennheizer'>Sennheizer</option>
+			<option value='Bosch'>Bosch</option>
+			<option value='Beats'>Beats</option>
+			<option value='Other'>Other</option>
+			</select>";
+	}
+	
+	function computers() {
+		echo "
+			<div class='rechtsffs'>
+	    	<div class='table-wrapper'>
+			<LEGEND><b>Pick a brand:</b></LEGEND>
+			<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
+			<option selected disabled hidden value='Select a brand'>Pick a brand</option>
+			<option value='Intel'>Intel</option>
+			<option value='AMD'>AMD</option>
+			<option value='Nvidia'>Nvidia</option>
+			<option value='Kingston'>Kingston</option>
+			<option value='Alienware'>Alienware</option>
+			<option value='Imac'>Imac</option>
+			<option value='Other'>Other</option>
+			</select>";
+	}
+	
+	function radio() {
+		echo "
+			<div class='rechtsffs'>
+	    	<div class='table-wrapper'>
+			<LEGEND><b>Pick a brand:</b></LEGEND>
+			<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
+			<option selected disabled hidden value='Select a brand'>Pick a brand</option>
+			<option value='Audiosonic'>Audiosonic</option>
+			<option value='AKAI'>AKAI</option>
+			<option value='Other'>Other</option>
+			</select>";
+	}
+	
+	function television () {
+		echo "
+			<div class='rechtsffs'>
+	    	<div class='table-wrapper'>
+			<LEGEND><b>Pick a brand:</b></LEGEND>
+			<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
+			<option selected disabled hidden value='Select a brand'>Pick a brand</option>
+			<option value='Sony'>Sony</option>
+			<option value='Samsung'>Samsung</option>
+			<option value='Phillips'>Phillips</option>
+			<option value='LG'>LG</option>
+			<option value='Panasonic'>Panasonic</option>
+			<option value='Other'>Other</option>
+			</select>";
+	}
+	
+?>
