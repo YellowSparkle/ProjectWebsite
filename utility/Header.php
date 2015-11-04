@@ -9,7 +9,11 @@ function generateHeader($loginbox = true, $logoutbox = true, $cartflip = NULL) {
 	echo getImgTag("logo", 150);
 	echo "<hr>";
 	echo "</div>";
-	
+	if (isset($_SESSION['username'])){
+		echo "<input id=homebutton class='button special' type=button name='Home' value='Home' onclick=\"window.location.href='../sell/category.php'\">";
+	} else {
+		echo "<input id=homebutton class='button special' type=button name='Home' value='Home' onclick=\"window.location.href='../index/homepage.php'\">";
+	}
 	// test img ( xavier )//
 	
 		echo "<div class='vierkant1'>";
