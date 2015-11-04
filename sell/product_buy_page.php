@@ -60,27 +60,82 @@
 		<?php	
 		
 		switch ($_GET['category']) {
-			case 'audio':
-				
-				break;
-			
 			case 'phones':
 				echo "
-				<div class='rechtsffs'>
-           		<div class='table-wrapper'>
-				<LEGEND><b>Pick a brand:</b></LEGEND>
-				<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
-				<option selected disabled hidden value='Select a brand'>Pick a brand</option>
-				<option value='Samsung'>Samsung</option>
-				<option value='Nokia'>Nokia</option>
-				<option value='Apple'>Apple</option>
-				<option value='Blackberry'>Blackberry</option>
-				<option value='OnePlus'>OnePlus</option>
-				<option value='Motorola'>Motorola</option>
-				</select>";
-				
+					<div class='rechtsffs'>
+	           		<div class='table-wrapper'>
+					<LEGEND><b>Pick a brand:</b></LEGEND>
+					<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
+					<option selected disabled hidden value='Select a brand'>Pick a brand</option>
+					<option value='Samsung'>Samsung</option>
+					<option value='Nokia'>Nokia</option>
+					<option value='Apple'>Apple</option>
+					<option value='Blackberry'>Blackberry</option>
+					<option value='OnePlus'>OnePlus</option>
+					<option value='Motorola'>Motorola</option>
+					<option value='Other'>other</option>
+					</select>";
 				break;
 			
+			case 'audio':
+				echo "
+					<div class='rechtsffs'>
+	           		<div class='table-wrapper'>
+					<LEGEND><b>Pick a brand:</b></LEGEND>
+					<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
+					<option selected disabled hidden value='Select a brand'>Pick a brand</option>
+					<option value='Phillips'>Phillips</option>
+					<option value='Sony'>Sony</option>
+					<option value='Sennheizer'>Sennheizer</option>
+					<option value='Bosch'>Bosch</option>
+					<option value='Beats'>Beats</option>
+					<option value='Other'>Other</option>
+					</select>";
+				break;
+				
+			case 'computers':
+				echo "
+					<div class='rechtsffs'>
+	           		<div class='table-wrapper'>
+					<LEGEND><b>Pick a brand:</b></LEGEND>
+					<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
+					<option selected disabled hidden value='Select a brand'>Pick a brand</option>
+					<option value='Intel'>Intel</option>
+					<option value='AMD'>AMD</option>
+					<option value='Nvidia'>Nvidia</option>
+					<option value='Kingston'>Kingston</option>
+					<option value='Alienware'>Alienware</option>
+					<option value='Imac'>Imac</option>
+					<option value='Other'>Other</option>
+					</select>";
+				break;
+			case 'radio':
+				echo "
+					<div class='rechtsffs'>
+	           		<div class='table-wrapper'>
+					<LEGEND><b>Pick a brand:</b></LEGEND>
+					<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
+					<option selected disabled hidden value='Select a brand'>Pick a brand</option>
+					<option value='Audiosonic'>Audiosonic</option>
+					<option value='AKAI'>AKAI</option>
+					<option value='Other'>Other</option>
+					</select>";
+				break;
+			case 'television':
+				echo "
+					<div class='rechtsffs'>
+	           		<div class='table-wrapper'>
+					<LEGEND><b>Pick a brand:</b></LEGEND>
+					<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
+					<option selected disabled hidden value='Select a brand'>Pick a brand</option>
+					<option value='Sony'>Sony</option>
+					<option value='Samsung'>Samsung</option>
+					<option value='Phillips'>Phillips</option>
+					<option value='LG'>LG</option>
+					<option value='Panasonic'>Panasonic</option>
+					<option value='Other'>Other</option>
+					</select>";
+				break;
 			default:
 				
 				break;
@@ -124,6 +179,11 @@
                 <div class="linksnu">
 			<LEGEND><b>Product discription:</b></LEGEND>
 				<textarea name="Text1" style="width:500px;" cols="40" rows="5"></textarea>
+				<br />
+				<form action="Order_Sent.php" method="post">
+					<input type="submit" name="submit" value="Submit"/>
+				</form>
+					
 	</div>
  <!-------------------------->
 
