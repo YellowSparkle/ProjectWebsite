@@ -68,6 +68,21 @@
 		  border solid 3px color: red;
 		}
 
+/* login from bank page */
+
+label.loginbank {
+    width: 80px;
+    clear:left;
+    text-align:right;
+    padding-right:10px;
+}
+input.loginbank, label.loginbank 
+{
+    float:left;
+}
+
+/* einde login from bank page */
+
 /* start option page */
 
 img.optionimage {
