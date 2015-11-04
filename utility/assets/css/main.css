@@ -4,18 +4,20 @@
 
 	div.linksffs 
 	{
-    width: 20%;
+    margin-left: 5%;
     text-align:left;
 	}
 	
 	div.linksnu 
 	{
-    margin:5%;
+    margin-left:5%;
+    text-align:left;
     }
     
 	div.rechtsffs 
 	{
-    margin: -10% 0 0 10%;
+    margin-right: -20% 0 0 10%;
+    text-align:left;
     }
     
     

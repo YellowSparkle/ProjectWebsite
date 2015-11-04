@@ -14,12 +14,12 @@
 	-->
 	
 	<br><br><br>
-	<img src="../img/Yes-Bank-Logo.png" alt="Logo""> <br><br>
+	<img src="../img/Yes-Bank-Logo.png" alt="Logo"> <br><br>
 		 <label for="username">Username</label> <!-- Username text box  -->
   	 	<input type="text" id="username" />
   	 	<br />
   	 	<label for="password">Password</label> <!-- Password text box  -->
-  	 	<input type="text" id="password" />
+  	 	<input type="password" id="password" />
 		<br/> 
 		<br/> 
 		<input type="submit" name="submit" value="Submit"/>

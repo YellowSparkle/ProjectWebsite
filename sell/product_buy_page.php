@@ -65,6 +65,9 @@
 				<option value='Samsung'>Samsung</option>
 				<option value='Nokia'>Nokia</option>
 				<option value='Apple'>Apple</option>
+				<option value='Blackberry'>Blackberry</option>
+				<option value='OnePlus'>OnePlus</option>
+				<option value='Motorola'>Motorola</option>
 				</select>
  <!-------------------------->
  
