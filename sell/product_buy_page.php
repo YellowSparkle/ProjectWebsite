@@ -122,7 +122,7 @@
 				<textarea name="Text1" style="width:500px;" cols="40" rows="5"></textarea>
 				<br />
 				<form action="Order_Sent.php" method="post">
-					<input type="submit" name="submit" value="Submit"/>
+					<input class="button special" type="submit" name="submit" value="Submit"/>
 				</form>
 					
 	</div>

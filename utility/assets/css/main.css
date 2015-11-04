@@ -1,3 +1,14 @@
+/* start Home Button */
+#homebutton {
+
+position: absolute;   
+		  top: 11.5%;
+		  left: 7.5%; 
+		  }
+
+/* e Home Button */
+
+
 /* Meuk voor Buy_page (ivo)*/
 
 
@@ -269,9 +280,6 @@ div.vierkant10 {
   	}
 /* end update test xavier */
 
-/* start opmaak shopping cart buttons */
-
-/* end opmaak shopping cart buttons */
 
 /* Reset */
 
