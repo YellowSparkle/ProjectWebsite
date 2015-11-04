@@ -2484,7 +2484,7 @@ div.vierkant10 {
 
     input[type="text"],
     input[type="password"],
-    input[type="E_mail"],
+    input[type="email"],
     select,
     textarea {
         -moz-appearance: none;
@@ -2504,7 +2504,7 @@ div.vierkant10 {
 
         input[type="text"]:invalid,
         input[type="password"]:invalid,
-        input[type="E_mail"]:invalid,
+        input[type="email"]:invalid,
         select:invalid,
         textarea:invalid {
             box-shadow: none;
@@ -2544,7 +2544,7 @@ div.vierkant10 {
 
     input[type="text"],
     input[type="password"],
-    input[type="E_mail"],
+    input[type="email"],
     select {
         height: 2.75em;
     }
@@ -2606,7 +2606,7 @@ div.vierkant10 {
 
         input[type="checkbox"]:checked + label:before,
         input[type="radio"]:checked + label:before {
-            content: '\f00c';
+            content: '✓';
         }
 
     input[type="checkbox"] + label:before {
@@ -2643,7 +2643,7 @@ div.vierkant10 {
 
     input[type="text"],
     input[type="password"],
-    input[type="E_mail"],
+    input[type="email"],
     select,
     textarea {
         background: rgba(144, 144, 144, 0.075);
@@ -2652,7 +2652,7 @@ div.vierkant10 {
 
         input[type="text"]:focus,
         input[type="password"]:focus,
-        input[type="E_mail"]:focus,
+        input[type="email"]:focus,
         select:focus,
         textarea:focus {
             border-color: #00cdcf;
