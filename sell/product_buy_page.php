@@ -53,15 +53,21 @@
 
 
 <!-- SELECT BRAND DROP DOWN-->
-
+			<br>
+			<br>
+			<br>
+			<br>
         <div class="rechtsffs">
             <div class="table-wrapper">
 				<LEGEND><b>Pick a brand:</b></LEGEND>
 				<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
-				<option value='Select a brand'>Pick a brand</option>
+				<option selected disabled hidden value='Select a brand'>Pick a brand</option>
 				<option value='Samsung'>Samsung</option>
 				<option value='Nokia'>Nokia</option>
 				<option value='Apple'>Apple</option>
+				<option value='Blackberry'>Blackberry</option>
+				<option value='OnePlus'>OnePlus</option>
+				<option value='Motorola'>Motorola</option>
 				</select>
  <!-------------------------->
  
