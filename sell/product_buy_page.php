@@ -57,7 +57,35 @@
 			<br>
 			<br>
 			<br>
-        <div class="rechtsffs">
+		<?php	
+		
+		switch ($_GET['category']) {
+			case 'audio':
+				
+				break;
+			
+			case 'phones':
+				echo "
+				<div class='rechtsffs'>
+           		<div class='table-wrapper'>
+				<LEGEND><b>Pick a brand:</b></LEGEND>
+				<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
+				<option selected disabled hidden value='Select a brand'>Pick a brand</option>
+				<option value='Samsung'>Samsung</option>
+				<option value='Nokia'>Nokia</option>
+				<option value='Apple'>Apple</option>
+				<option value='Blackberry'>Blackberry</option>
+				<option value='OnePlus'>OnePlus</option>
+				<option value='Motorola'>Motorola</option>
+				</select>";
+				
+				break;
+			
+			default:
+				
+				break;
+		}?>	
+     <!--   <div class="rechtsffs">
             <div class="table-wrapper">
 				<LEGEND><b>Pick a brand:</b></LEGEND>
 				<select style='width: 300px !important; min-width: 300px; max-width: 300px;'>
@@ -68,7 +96,9 @@
 				<option value='Blackberry'>Blackberry</option>
 				<option value='OnePlus'>OnePlus</option>
 				<option value='Motorola'>Motorola</option>
-				</select>
+				</select>-->
+				
+		
  <!-------------------------->
  
  <!-- PRICE TEXTBOX -->
@@ -89,16 +119,14 @@
                 <label for="secondhand">Second Hand</label>
             </div></form>
             </div> </div>
-  <!-------------------------->
   <!-- DICRIPTION TEXTBOX -->
-          <div class="linksnu">
+
+                <div class="linksnu">
 			<LEGEND><b>Product discription:</b></LEGEND>
 				<textarea name="Text1" style="width:500px;" cols="40" rows="5"></textarea>
-				<br />
-				<form action="../sell/Order_Sent.php" method="post">
-					<input type="submit" name="submit" value="Submit"/>
-				</form>
-		  </div>
+	</div>
+ <!-------------------------->
+
  <!--------------------------> 
 </body>
 </html>
