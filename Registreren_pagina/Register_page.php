@@ -5,6 +5,7 @@
 	
 	generateTitle("Registration");
 	generateHeader();
+	var_dump($_POST);
 ?>
 	
 	
@@ -13,11 +14,11 @@
 	<ul>
 		<li>*Title</li>
 		
-				<input type="radio" id="male" name="title" value="<?php male()?>">
+				<input type="radio" id="male" name="title" <?php male()?> value="male">
                 <label for="male">Mr.</label>
 			
 			
-		        <input type="radio" id="female" name="title" value="<?php female()?>">
+		        <input type="radio" id="female" name="title" <?php female()?> value="female">
                 <label for="female">Ms.</label>
 		
 		<li>First name</li>
@@ -141,9 +142,10 @@
 			if (array_key_exists("title", $_POST)){
 				if ($_POST["title"] == "male"){
 					echo "checked";
-					}} 
-				else {
-					echo "checked";}
+				}
+			} else {
+				echo "checked";
+			}
 		}
 	
 	function female() {

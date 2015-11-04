@@ -60,7 +60,7 @@ if(isset($_SESSION["cart_item"])){
 </tr>
 </tbody>
 </table>
-<input id=cartbutton class='button special' type=button name='Cart' value='Checkout' onclick="window.location.href='../Payment_processing/Login_Form_bank.php'\">
+<input id=cartbutton class='button special' type=button name='Cart' value='Checkout' onclick="window.location.href='../Payment_processing/Login_Form_bank.php'">
 		
   <?php
 }
