@@ -4,6 +4,7 @@
 	require "../utility/Header.php";
 	generateTitle("Order complete");
 	generateHeader();
+	unset($_SESSION["cart_item"]);
 ?>
 
 

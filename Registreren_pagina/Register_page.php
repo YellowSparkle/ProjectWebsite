@@ -12,9 +12,13 @@
 	<form name="registerform" method="post" action="Register_page.php" class="tekst">
 	<ul>
 		<li>*Title</li>
-		<input type="radio" name="title" value="male"<?php male() ?>> Mr.
+		
+				<input type="radio" id="male" name="title" value="<?php male()?>">
+                <label for="male">Mr.</label>
 			
-		<input type="radio" name="title" value="female"<?php female() ?>> Ms.
+			
+		        <input type="radio" id="female" name="title" value="<?php female()?>">
+                <label for="female">Ms.</label>
 		
 		<li>First name</li>
 		<li><input name="first_name" type="text" size="50" value="<?php first_name() ?>"></li>
@@ -48,7 +52,7 @@
 		
 		<br>
 		
-		<li><input type="reset" value="Begin opnieuw"> <input type="submit" name="versturen" value="Verstuur bericht"></li>
+		<li><input type="reset" value="Clear form"> <input type="submit" name="Register" value="Register"></li>
 		<p>
 			All fields with * must be filled in correctly.
 		</p>

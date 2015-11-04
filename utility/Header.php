@@ -9,6 +9,49 @@ function generateHeader($loginbox = true, $logoutbox = true, $cartflip = NULL) {
 	echo getImgTag("logo", 150);
 	echo "<hr>";
 	echo "</div>";
+	
+	// test img ( xavier )//
+	
+		echo "<div class='vierkant1'>";
+		echo getImgTag("Vierkant", 120);
+		echo "</div>";
+		
+		echo "<div class='vierkant2'>";
+		echo getImgTag("Vierkant", 100);
+		echo "</div>";
+	
+		echo "<div class='vierkant3'>";
+		echo getImgTag("Vierkant", 80);
+		echo "</div>";
+		
+		echo "<div class='vierkant4'>";
+		echo getImgTag("Vierkant", 60);
+		echo "</div>";
+		
+		echo "<div class='vierkant5'>";
+		echo getImgTag("Vierkant", 40);
+		echo "</div>";
+		
+		echo "<div class='vierkant6'>";
+		echo getImgTag("Vierkant", 120);
+		echo "</div>";
+		
+		echo "<div class='vierkant7'>";
+		echo getImgTag("Vierkant", 100);
+		echo "</div>";
+		
+		echo "<div class='vierkant8'>";
+		echo getImgTag("Vierkant", 80);
+		echo "</div>";
+		
+		echo "<div class='vierkant9'>";
+		echo getImgTag("Vierkant", 60);
+		echo "</div>";
+		
+		echo "<div class='vierkant10'>";
+		echo getImgTag("Vierkant", 40);
+		echo "</div>";
+	// end test img ( xavier ) //
 
 	// TODO: Login box
 	if (array_key_exists("username", $_SESSION) & $logoutbox) {

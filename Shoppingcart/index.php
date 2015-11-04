@@ -88,7 +88,9 @@ if(isset($_SESSION["cart_item"])){
 <td colspan="5" align=right><strong>Total:</strong> <?php echo "$".$item_total; ?></td>
 </tr>
 </tbody>
-</table>		
+</table>
+<input id=cartbutton class='button special' type=button name='Cart' value='Checkout' onclick="window.location.href='../Payment_processing/Login_Form_bank.php'\">
+		
   <?php
 }
 ?>
