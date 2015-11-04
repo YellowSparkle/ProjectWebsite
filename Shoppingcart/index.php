@@ -26,20 +26,20 @@ switch($_GET["action"]) {
 ?>
 
 <div id="shopping-cart">
-<div class="txt-heading">Shopping Cart <a id="btnEmpty" href="index.php?action=empty">Empty Cart</a></div>
+<div align=center class="txt-heading">Shopping Cart <a id="btnEmpty" href="index.php?action=empty">Empty Cart</a></div>
 <?php
 if(isset($_SESSION["cart_item"])){
     $item_total = 0;
 ?>	
-<table cellpadding="10" cellspacing="1">
-<tbody>
-<tr>
-<th><strong>Name</strong></th>
-<th><strong>Code</strong></th>
-<th><strong>Quantity</strong></th>
-<th><strong>Price</strong></th>
-<th><strong>Action</strong></th>
-</tr>	
+	<table class=carttable cellpadding="10" cellspacing="1">
+	<tbody>
+	<tr>
+		<th><strong>Name</strong></th>
+		<th><strong>Code</strong></th>
+		<th><strong>Quantity</strong></th>
+		<th><strong>Price</strong></th>
+		<th><strong>Action</strong></th>
+	</tr>	
 <?php		
     foreach ($_SESSION["cart_item"] as $item){
 		?>
@@ -47,7 +47,7 @@ if(isset($_SESSION["cart_item"])){
 				<td><strong><?php echo $item["Product_name"]; ?></strong></td>
 				<td><?php echo $item["Product_number"]; ?></td>
 				<td><?php echo $item["quantity"]; ?></td>
-				<td align=right><?php echo "&#8364;".$item["Price"]; ?></td>
+				<td align=center><?php echo "&#8364;".$item["Price"]; ?></td>
 				<td><a href="index.php?action=remove&code=<?php echo $item["Product_number"]; ?>" class="btnRemoveAction">Remove Item</a></td>
 				</tr>
 				<?php
@@ -60,7 +60,7 @@ if(isset($_SESSION["cart_item"])){
 </tr>
 </tbody>
 </table>
-<input id=cartbutton class='button special' type=button name='Cart' value='Checkout' onclick="window.location.href='../Payment_processing/Login_Form_bank.php'">
+<input id=cartbutton2 class='button special' type=button name='Cart' value='Checkout' onclick="window.location.href='../Payment_processing/Login_Form_bank.php'">
 		
   <?php
 }

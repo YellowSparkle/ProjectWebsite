@@ -10,7 +10,7 @@ function generateHeader($loginbox = true, $logoutbox = true, $cartflip = NULL) {
 	echo "<hr>";
 	echo "</div>";
 	
-	// test img ( xavier )//
+	// wit vierkant img ( xavier )//
 	
 		echo "<div class='vierkant1'>";
 		echo getImgTag("Vierkant", 120);
@@ -51,7 +51,7 @@ function generateHeader($loginbox = true, $logoutbox = true, $cartflip = NULL) {
 		echo "<div class='vierkant10'>";
 		echo getImgTag("Vierkant", 40);
 		echo "</div>";
-	// end test img ( xavier ) //
+	// end wit vierkant img ( xavier ) //
 
 	// TODO: Login box
 	if (array_key_exists("username", $_SESSION) & $logoutbox) {

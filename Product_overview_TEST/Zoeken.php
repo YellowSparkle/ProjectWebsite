@@ -46,8 +46,8 @@ generateHeader(FALSE, TRUE, FALSE);
 						Zoek op:
 						<input class="zoekbox" type="text" name="search" autocomplete="off" id="" value="">
 						<br>
-						<input type="submit" name="submit" value="Zoeken">
-						<input type="button" name="back" value="Back" onclick="window.location.href='../sell/category.php'">
+						<input class="button special" type="submit" name="submit" value="Zoeken">
+						<input class="button special" type="button" name="back" value="Back" onclick="window.location.href='../sell/category.php'">
 					</form>
 				</div>
 		</p>

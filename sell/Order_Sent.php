@@ -18,8 +18,8 @@
 	
 		<meta http-equiv="refresh" content="10;url=../index/optionpage.php" /> <!-- Auto refreshes page -->
 		<h3>
-		Your product has succesfully been registerd, you will recieve a mail<br /> 
-		if we are interested in the product.
+		Your product has succesfully been registerd, you will recieve an email<br /> 
+		when we are ready to accept your product.
 		</h3>
 	
 	
