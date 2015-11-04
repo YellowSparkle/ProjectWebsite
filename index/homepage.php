@@ -6,7 +6,7 @@
 ?>
 
 <head>
-	<title>Aanmelden</title>
+	<title>Sign in</title>
 </head>
 
 

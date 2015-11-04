@@ -43,10 +43,10 @@ generateHeader(FALSE, TRUE, FALSE);
 					<form name="search" method="get" action="">
 						<input type="hidden" name="category" value="<?= $_GET["category"] ?>" id="category"/>
 						<!--Hier voer je de zoekopdracht in. In de browser-->
-						Zoek op:
+						Search:
 						<input class="zoekbox" type="text" name="search" autocomplete="off" id="" value="">
 						<br>
-						<input class="button special" type="submit" name="submit" value="Zoeken">
+						<input class="button special" type="submit" name="submit" value="Search">
 						<input class="button special" type="button" name="back" value="Back" onclick="window.location.href='../sell/category.php'">
 					</form>
 				</div>
@@ -89,7 +89,7 @@ if (isset($_GET['submit'])) {
 		<div class="rechtsaapje">
 			<div class="table-wrapper">
 				<p>
-					Gevonden resultaten:
+					Found results:
 				</p>
 				<table class="alt" style="margin-right: 2cm;">
 					<thead>
