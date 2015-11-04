@@ -3,7 +3,7 @@
 	require_once "../utility/Header.php";
 	require_once "../utility/imageprovider.php";
 	generateTitle("Sell your device");
-	generateHeader(FALSE);
+	generateHeader(FALSE, TRUE, TRUE);
 ?>
 
 

@@ -10,7 +10,6 @@
 
 <head>
 	<title>Order Complete</title>
-	<link rel="stylesheet" href="../utility/assets/css/main.css" />
 </head>
 
 <body>
@@ -22,12 +21,14 @@
 		</h3>
 	
 	
-		<p>If the browser does not redirect you automaticly after 5 seconds,<br /> 
-		then click <A HREF="../index/optionpage.php">here</A> to return to the home page.</p>
+		<p>
+		If the browser does not redirect you automaticly after 5 seconds,<br /> 
+		then click <a HREF="../index/optionpage.php">here</a> to return to the home page.
+		</p>
 		
-						 <!-- ^^link op scherm^^ -->
 	</center>
 </body>
+
 <?php generateFoot(); ?>
 
 </html>
