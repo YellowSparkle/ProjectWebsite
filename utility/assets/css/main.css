@@ -1877,8 +1877,6 @@ div.vierkant10 {
         }
 
         @media screen and (max-width: 980px) {
-
-<<<<<<< HEAD
             body, input, select, textarea {
                 font-size: 12pt;
             }
@@ -2222,7 +2220,6 @@ div.vierkant10 {
 	hr {
 		border-bottom-color: #e3e3e3;
 	}
->>>>>>> 5a204395d1b98e2bede07ce06f57f0f9aebb4b73
 
 /* Box */
 
@@ -2485,6 +2482,7 @@ div.vierkant10 {
     input[type="text"],
     input[type="password"],
     input[type="email"],
+    input[type="tel"],
     select,
     textarea {
         -moz-appearance: none;
@@ -2505,6 +2503,7 @@ div.vierkant10 {
         input[type="text"]:invalid,
         input[type="password"]:invalid,
         input[type="email"]:invalid,
+        input[type="tel"]:invalid,
         select:invalid,
         textarea:invalid {
             box-shadow: none;
@@ -2545,6 +2544,7 @@ div.vierkant10 {
     input[type="text"],
     input[type="password"],
     input[type="email"],
+    input[type="tel"],
     select {
         height: 2.75em;
     }
@@ -2644,6 +2644,7 @@ div.vierkant10 {
     input[type="text"],
     input[type="password"],
     input[type="email"],
+    input[type="tel"],
     select,
     textarea {
         background: rgba(144, 144, 144, 0.075);
@@ -2653,6 +2654,7 @@ div.vierkant10 {
         input[type="text"]:focus,
         input[type="password"]:focus,
         input[type="email"]:focus,
+        input[type="tel"]:focus,
         select:focus,
         textarea:focus {
             border-color: #00cdcf;
@@ -3334,6 +3336,7 @@ div.vierkant10 {
             .wrapper.style1 input[type="text"],
             .wrapper.style1 input[type="password"],
             .wrapper.style1 input[type="email"],
+            .wrapper.style1 input[type="tel"],
             .wrapper.style1 select,
             .wrapper.style1 textarea {
                 background: rgba(255, 255, 255, 0.075);
@@ -3343,6 +3346,7 @@ div.vierkant10 {
                 .wrapper.style1 input[type="text"]:focus,
                 .wrapper.style1 input[type="password"]:focus,
                 .wrapper.style1 input[type="email"]:focus,
+                .wrapper.style1 input[type="tel"]:focus,
                 .wrapper.style1 select:focus,
                 .wrapper.style1 textarea:focus {
                     border-color: #00cdcf;
@@ -3554,6 +3558,7 @@ div.vierkant10 {
             .wrapper.style2 input[type="text"],
             .wrapper.style2 input[type="password"],
             .wrapper.style2 input[type="email"],
+            .wrapper.style2 input[type="tel"],
             .wrapper.style2 select,
             .wrapper.style2 textarea {
                 background: #fff;
@@ -3563,6 +3568,7 @@ div.vierkant10 {
                 .wrapper.style2 input[type="text"]:focus,
                 .wrapper.style2 input[type="password"]:focus,
                 .wrapper.style2 input[type="email"]:focus,
+                .wrapper.style2 input[type="tel"]:focus,
                 .wrapper.style2 select:focus,
                 .wrapper.style2 textarea:focus {
                     border-color: #00cdcf;
@@ -3790,6 +3796,7 @@ div.vierkant10 {
             .wrapper.style3 input[type="text"],
             .wrapper.style3 input[type="password"],
             .wrapper.style3 input[type="email"],
+            .wrapper.style3 input[type="tel"],
             .wrapper.style3 select,
             .wrapper.style3 textarea {
                 background: #00b4b5;
@@ -3799,6 +3806,7 @@ div.vierkant10 {
                 .wrapper.style3 input[type="text"]:focus,
                 .wrapper.style3 input[type="password"]:focus,
                 .wrapper.style3 input[type="email"]:focus,
+                .wrapper.style3 input[type="tel"]:focus,
                 .wrapper.style3 select:focus,
                 .wrapper.style3 textarea:focus {
                     border-color: #00cdcf;

@@ -39,7 +39,7 @@
 		<li><input name="city" type="text" size="50" value="<?php city() ?>"></li>
 			
 		<li>Phone number</li>
-		<li><input name="phone_number" type="text" size="50" name="<?php phone_number() ?>"></li>
+		<li><input name="phone_number" type="tel" size="50" name="<?php phone_number() ?>"></li>
 			
 		<li>*E-mail adress</li>
 		<li><input name="email" type="email" size="50" value="<?php email() ?>"></li>
