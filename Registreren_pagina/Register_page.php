@@ -5,7 +5,6 @@
 	
 	generateTitle("Registration");
 	generateHeader();
-	var_dump($_POST);
 ?>
 	
 	
@@ -43,7 +42,7 @@
 		<li><input name="phone_number" type="text" size="50" name="<?php phone_number() ?>"></li>
 			
 		<li>*E-mail adress</li>
-		<li><input name="email" type="text" size="50" value="<?php email() ?>"></li>
+		<li><input name="email" type="email" size="50" value="<?php email() ?>"></li>
 			
 		<li>*Password</li>
 		<li><input name="password" type="password" size="50" value="<?php password() ?>"></li>
@@ -93,9 +92,10 @@
 		echo "<font color='red'>";
 		
 		$passcheck = true;
-		
-		if ($_POST["password"] != $_POST["password_check"]){
-			echo "* Passwords do not match<br>";	
+		if (isset($_POST['password']) AND isset($_POST['password_check'])){
+			if ($_POST["password"] != $_POST["password_check"]){
+				echo "* Passwords do not match<br>";	
+			}
 		}
 		
 		foreach ($errorkeys as $value) {
