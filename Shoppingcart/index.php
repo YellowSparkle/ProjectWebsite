@@ -4,39 +4,10 @@
 	require_once "../utility/imageprovider.php";
 	generateTitle("Sell your device");
 	generateHeader(FALSE, TRUE, TRUE);
-?>
-
-
-<BODY>
-
-<?php
-
 require_once("dbcontroller.php");
 $db_handle = new DBController();
 if(!empty($_GET["action"])) {
 switch($_GET["action"]) {
-	case "add":
-		if(!empty($_POST["quantity"])) {
-			$productByCode = $db_handle->runQuery("SELECT * FROM Product WHERE Product_number='" . $_GET["code"] . "'");
-			$itemArray = array($productByCode[0]["Product_number"]=>array('Product_name'=>$productByCode[0]["Product_name"], 'Product_number'=>$productByCode[0]["Product_number"], 'quantity'=>$_POST["quantity"], 'Price'=>$productByCode[0]["Price"]));
-			
-			if(!empty($_SESSION["cart_item"])) {
-				if(array_key_exists($productByCode[0]["Product_number"],$_SESSION["cart_item"])) {
-					foreach($_SESSION["cart_item"] as $k => $v) {
-							if($productByCode[0]["Product_number"] == $k){
-								$_SESSION["cart_item"][$k]["quantity"] = $_POST["quantity"] + $_SESSION["cart_item"][$k]["quantity"];
-							}
-					}
-				} else {
-					foreach ($itemArray as $key => $value) {
-						$_SESSION["cart_item"][$key] = $value;
-					}
-				}
-			} else {
-				$_SESSION["cart_item"] = $itemArray;
-			}
-		}
-	break;
 	case "remove":
 		if(!empty($_SESSION["cart_item"])) {
 			foreach($_SESSION["cart_item"] as $k => $v) {
@@ -89,7 +60,7 @@ if(isset($_SESSION["cart_item"])){
 </tr>
 </tbody>
 </table>
-<input id=cartbutton class='button special' type=button name='Cart' value='Checkout' onclick="window.location.href='../Payment_processing/Login_Form_bank.php'\">
+<input id=cartbutton class='button special' type=button name='Cart' value='Checkout' onclick="window.location.href='../Payment_processing/Login_Form_bank.php'">
 		
   <?php
 }

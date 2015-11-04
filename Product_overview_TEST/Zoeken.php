@@ -7,7 +7,7 @@ require_once "../utility/Header.php";
 //De header erbij betrekken
 generateTitle("Search");
 //Titel bovenaan de pagina
-generateHeader(FALSE, TRUE, FALSE);
+
 if (!isset($_GET["category"])) {
 	$_GET["category"] = "audio";
 }
@@ -34,6 +34,7 @@ if (!empty($_POST["quantity"])) {
 		$_SESSION["cart_item"] = $itemArray;
 	}
 }
+generateHeader(FALSE, TRUE, FALSE);
 ?>
 <p>
 			<div class="row 200%">
@@ -46,6 +47,7 @@ if (!empty($_POST["quantity"])) {
 						<input class="zoekbox" type="text" name="search" autocomplete="off" id="" value="">
 						<br>
 						<input type="submit" name="submit" value="Zoeken">
+						<input type="button" name="back" value="Back" onclick="window.location.href='../sell/category.php'">
 					</form>
 				</div>
 		</p>
