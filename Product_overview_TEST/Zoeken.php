@@ -111,7 +111,7 @@ if (isset($_GET['submit'])) {
 							<td><?= $row['Product_number'] ?></td>
 							<td><?= $row['Product_name'] ?></td>
 							<td><?= $row['Description'] ?></td>
-							<td><?= $row['Price'] ?></td>
+							<td><?= "&#8364;".$row['Price'] ?></td>
 							<td><?= $row['In_stock'] ?></td>
 							<td><?= $row['Category'] ?></td>
 							<td class="joost">

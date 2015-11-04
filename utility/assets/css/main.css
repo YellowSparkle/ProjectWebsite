@@ -177,16 +177,14 @@ div.centerbox {   /*center login*/
 div.headlogin {   /*Login rechts in header*/
   position: absolute;   
   top: 16%;
-  left: 85%;   
+  left: 90%;   
   transform: translate(-50%, -50%);
   text-align:left;
+
 }        
 
 
-/*div, halve zool*/
-
-
-
+/*div, joost*/
 
 
 
