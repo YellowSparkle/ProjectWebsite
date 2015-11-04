@@ -19,7 +19,8 @@ if (isset($_GET['submit'])) {
 		<br>
 		<br>
 		<div id="imageBox">
-			<?php echo getImgTag("audioicon", 150);
+			<?php 
+			echo getImgTag("audioicon", 150);
 			echo getImgTag("phoneicon", 150);
 			echo getImgTag("computericon", 150);
 			echo getImgTag("tvicon", 150);

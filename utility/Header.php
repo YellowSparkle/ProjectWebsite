@@ -17,18 +17,17 @@ function generateHeader($loginbox = true, $logoutbox = true, $cartflip = NULL) {
 				<form method='get' action='../utility/Login.php'>
 				Welcome, $_SESSION[username]<br>
 				<input href='#' class='button special' type='submit' value='Logout'>
-				<input type=hidden name='logout' value='true'>
-				</form>";
+				<input type=hidden name='logout' value='true'>";
 			if (isset($cartflip)){
 				if($cartflip){
 					if (isset($_SESSION['category'])){
-						$echodata .= "<input type=button name='Cart' value='Back' onclick=\"window.location.href='../Product_overview_TEST/Zoeken.php?submit=true&category=$_SESSION[category]'\">";
+						$echodata .= "<input id=cartbutton class='button special' type=button name='Cart' value='Back' onclick=\"window.location.href='../Product_overview_TEST/Zoeken.php?submit=true&category=$_SESSION[category]'\">";
 					}
 				} else {
-					$echodata .= "<input type=button name='Cart' value='Shopping cart' onclick=\"window.location.href='../Shoppingcart/index.php'\">";
+					$echodata .= "<input id=cartbutton class='button special' type=button name='Cart' value='Shopping cart' onclick=\"window.location.href='../Shoppingcart/index.php'\">";
 				}
 			}
-   			echo $echodata . "</div>";
+   			echo $echodata . "</form></div>";
 	} elseif ($loginbox) {
 		echo "
 			<div class=headlogin>

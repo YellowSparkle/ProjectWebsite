@@ -76,7 +76,7 @@ if(isset($_SESSION["cart_item"])){
 				<td><strong><?php echo $item["Product_name"]; ?></strong></td>
 				<td><?php echo $item["Product_number"]; ?></td>
 				<td><?php echo $item["quantity"]; ?></td>
-				<td align=right><?php echo "$".$item["Price"]; ?></td>
+				<td align=right><?php echo "&#8364;".$item["Price"]; ?></td>
 				<td><a href="index.php?action=remove&code=<?php echo $item["Product_number"]; ?>" class="btnRemoveAction">Remove Item</a></td>
 				</tr>
 				<?php
