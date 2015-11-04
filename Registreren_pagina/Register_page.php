@@ -58,8 +58,11 @@
 	
 <?php
 	$keys = array("title", "first_name", "last_name", "address", "zip", "city", "email", "password", "password_check");
+	
 	$errorkeys = array();
+	
 	$continue = true;
+	
 	foreach ($keys as $value) {
 		if(array_key_exists($value, $_POST)){
 			if ($_POST[$value] == ""){
@@ -71,18 +74,21 @@
 			$continue = false;
 		}
 	}
+	
 	if ($continue){
-		echo "<script>";
-		echo "document.registerform.action='Register_script.php';";
-		echo "document.registerform.submit();";
-		echo "</script>";
-	if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-		print "* Email adress is not filled in correctly<br>";
-	}
+			echo "<script>";
+			echo "document.registerform.action='Register_script.php';";
+			echo "document.registerform.submit();";
+			echo "</script>";
+		if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+			print "* Email adress is not filled in correctly<br>";
+		}	
 	} elseif(array_key_exists("error", $_SESSION) && $_SESSION["error"] == true) {
 		echo "<br>";
 		echo "<font color='red'>";
+		
 		$passcheck = true;
+		
 		foreach ($errorkeys as $value) {
 			switch($value){
 				case "title":
@@ -112,8 +118,8 @@
 						echo "* Password is required<br>";
 						$passcheck = false;
 					}
-					break;
-			}
+				break;
+			}	
 		}
 		echo "</font>";
 	} else {
