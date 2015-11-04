@@ -9,8 +9,16 @@ function generateHeader($loginbox = true, $logoutbox = true, $cartflip = NULL) {
 	echo getImgTag("logo", 150);
 	echo "<hr>";
 	echo "</div>";
-	
-	// wit vierkant img ( xavier )//
+	if (isset($_SESSION['username'])){
+		echo "<input id=homebutton class='button special' type=button name='Home' value='Home' onclick=\"window.location.href='../sell/category.php'\">";
+	} else {
+		echo "<input id=homebutton class='button special' type=button name='Home' value='Home' onclick=\"window.location.href='../index/homepage.php'\">";
+		if (!isset($_SESSION['mustlogin'])){
+			echo "<meta http-equiv='refresh' content='0; url=../index/homepage.php' />";
+			$_SESSION["mustlogin"] = true;
+		}
+	}
+	// test img ( xavier )//
 	
 		echo "<div class='vierkant1'>";
 		echo getImgTag("Vierkant", 120);
@@ -51,7 +59,7 @@ function generateHeader($loginbox = true, $logoutbox = true, $cartflip = NULL) {
 		echo "<div class='vierkant10'>";
 		echo getImgTag("Vierkant", 40);
 		echo "</div>";
-	// end wit vierkant img ( xavier ) //
+	// end test img ( xavier ) //
 
 	// TODO: Login box
 	if (array_key_exists("username", $_SESSION) & $logoutbox) {
