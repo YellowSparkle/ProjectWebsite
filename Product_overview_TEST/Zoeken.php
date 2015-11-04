@@ -7,9 +7,32 @@ require_once "../utility/Header.php";
 //De header erbij betrekken
 generateTitle("Search");
 //Titel bovenaan de pagina
-generateHeader();
+generateHeader(FALSE, TRUE, FALSE);
 if (!isset($_GET["category"])) {
 	$_GET["category"] = "audio";
+}
+$_SESSION["category"] = $_GET["category"];
+require_once("../Shoppingcart/dbcontroller.php");
+$db_handle = new DBController();
+if (!empty($_POST["quantity"])) {
+	$productByCode = $db_handle -> runQuery("SELECT * FROM Product WHERE Product_number='" . $_GET["code"] . "'");
+	$itemArray = array($productByCode[0]["Product_number"] => array('Product_name' => $productByCode[0]["Product_name"], 'Product_number' => $productByCode[0]["Product_number"], 'quantity' => $_POST["quantity"], 'Price' => $productByCode[0]["Price"]));
+
+	if (!empty($_SESSION["cart_item"])) {
+		if (array_key_exists($productByCode[0]["Product_number"], $_SESSION["cart_item"])) {
+			foreach ($_SESSION["cart_item"] as $k => $v) {
+				if ($productByCode[0]["Product_number"] == $k) {
+					$_SESSION["cart_item"][$k]["quantity"] = $_POST["quantity"] + $_SESSION["cart_item"][$k]["quantity"];
+				}
+			}
+		} else {
+			foreach ($itemArray as $key => $value) {
+				$_SESSION["cart_item"][$key] = $value;
+			}
+		}
+	} else {
+		$_SESSION["cart_item"] = $itemArray;
+	}
 }
 ?>
 <p>
@@ -83,6 +106,7 @@ if (isset($_GET['submit'])) {
 						<?php while ($row = mysql_fetch_assoc($result)) {
 // Hier word de resultaat van hierboven ergens query in een assoc array afgedrukt.
 						?>
+						<form method="post" action="Zoeken.php?category=<?=$_GET["category"]?>&submit=true&code=<?= $row['Product_number'] ?>">
 						<tr>
 							<td><?= $row['Product_number'] ?></td>
 							<td><?= $row['Product_name'] ?></td>
@@ -97,6 +121,7 @@ if (isset($_GET['submit'])) {
 							<input class="button special" type="submit" value="Add to cart">
 							</td>
 						</tr>
+						</form>
 					</tbody>
 			</div>
 		</div>

@@ -4,7 +4,7 @@ require_once '../utility/imageprovider.php';
 echo '<link href="../utility/assets/css/main.css" rel="stylesheet">';
 session_start();
 // Site header
-function generateHeader($loginbox = true, $logoutbox = true) {
+function generateHeader($loginbox = true, $logoutbox = true, $cartflip = NULL) {
 	echo "<div id='banner'>";
 	echo getImgTag("logo", 150);
 	echo "<hr>";
@@ -12,14 +12,23 @@ function generateHeader($loginbox = true, $logoutbox = true) {
 
 	// TODO: Login box
 	if (array_key_exists("username", $_SESSION) & $logoutbox) {
-		echo "
+		$echodata = "
 			<div class=headlogin>
 				<form method='get' action='../utility/Login.php'>
 				Welcome, $_SESSION[username]<br>
 				<input href='#' class='button special' type='submit' value='Logout'>
 				<input type=hidden name='logout' value='true'>
-				</form>
-   			</div>";
+				</form>";
+			if (isset($cartflip)){
+				if($cartflip){
+					if (isset($_SESSION['category'])){
+						$echodata .= "<input type=button name='Cart' value='Back' onclick=\"window.location.href='../Product_overview_TEST/Zoeken.php?submit=true&category=$_SESSION[category]'\">";
+					}
+				} else {
+					$echodata .= "<input type=button name='Cart' value='Shopping cart' onclick=\"window.location.href='../Shoppingcart/index.php'\">";
+				}
+			}
+   			echo $echodata . "</div>";
 	} elseif ($loginbox) {
 		echo "
 			<div class=headlogin>
