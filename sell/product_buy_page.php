@@ -1,51 +1,45 @@
 <?php
    	require "../utility/HTMLGenerator.php";
 	require "../utility/Header.php";
-	
-	
 	generateTitle("Order complete");
 	generateHeader();
 ?>
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<link rel="stylesheet" href="../utility/assets/css/main.css" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 
-<body>
-
+	<body>
  <!--Working parts checkboxes--->
             <div class="row 200%">
                 <div class="helemaallinksaapje"></div>
                 <div class="linksffs">
                     <LEGEND><b>Includes a working:</b></LEGEND>
 			  		<li>
-					<input type="checkbox" id="Charger" name="Charger">
-					<label for="Charger">Charger</label>
+						<input type="checkbox" id="Charger" name="Charger">
+						<label for="Charger">Charger</label>
 					</li><li>			
-					<input type="checkbox" id="Power Cable" name="Power Cable">
-					<label for="Power Cable">Power Cable</label>
+						<input type="checkbox" id="Power Cable" name="Power Cable">
+						<label for="Power Cable">Power Cable</label>
 					</li><li>
-					<input type="checkbox" id="Chargingport" name="Chargingport">
-					<label for="Chargingport">Chargingport</label>
+						<input type="checkbox" id="Chargingport" name="Chargingport">
+						<label for="Chargingport">Chargingport</label>
 					</li><li>  
-					<input type="checkbox" id="Battery" name="Battery">
-					<label for="Battery">Battery</label>
+						<input type="checkbox" id="Battery" name="Battery">
+						<label for="Battery">Battery</label>
 					</li><li>  
-					<input type="checkbox" id="Screen" name="Screen">
-					<label for="Screen">Screen</label>
+						<input type="checkbox" id="Screen" name="Screen">
+						<label for="Screen">Screen</label>
 					</li><li>  
-					<input type="checkbox" id="Succesful boot" name="Succesful boot">
-					<label for="Succesful boot">Succesful boot</label>
+						<input type="checkbox" id="Succesful boot" name="Succesful boot">
+						<label for="Succesful boot">Succesful boot</label>
 					</li><li>  
-					<input type="checkbox" id="Headphone port" name="Headphone port">
-					<label for="Headphone port">Headphone port</label>
+						<input type="checkbox" id="Headphone port" name="Headphone port">
+						<label for="Headphone port">Headphone port</label>
 					</li> 	
-			</fieldset>
 			</div>
 			
 		
