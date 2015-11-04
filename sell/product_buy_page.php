@@ -89,14 +89,16 @@
                 <label for="secondhand">Second Hand</label>
             </div></form>
             </div> </div>
+  <!-------------------------->
   <!-- DICRIPTION TEXTBOX -->
-
-                <div class="linksnu">
+          <div class="linksnu">
 			<LEGEND><b>Product discription:</b></LEGEND>
 				<textarea name="Text1" style="width:500px;" cols="40" rows="5"></textarea>
-	</div>
- <!-------------------------->
-
+				<br />
+				<form action="../sell/Order_Sent.php" method="post">
+					<input type="submit" name="submit" value="Submit"/>
+				</form>
+		  </div>
  <!--------------------------> 
 </body>
 </html>
