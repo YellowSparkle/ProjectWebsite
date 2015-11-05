@@ -2420,7 +2420,7 @@ div.vierkant10 {
         button.special,
         .button.special {
             background-color: #ADE4FF;;
-            color: #ffffff !important;
+           /* color: #ffffff !important;*/
         }
 
             input[type="submit"].special:hover,

@@ -2,7 +2,7 @@
 
 	include '../include.php';
 	require_once '../utility/HTMLGenerator.php';
-	generateTitle('redirecting...', "../index/homepage.php", "10");
+	generateTitle('redirecting...', "../index/homepage.php", "3");
 
 	/*wachtwoord hashen*/	
     $hash = password_hash($_POST['password'], PASSWORD_BCRYPT);

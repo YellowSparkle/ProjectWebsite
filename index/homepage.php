@@ -23,7 +23,7 @@
 		<div class="login"> <!-- begin login div -->
 			<h1>Sign In</h1>
 			<form method="post" action="../utility/Login.php">
-				<p><input type="text" name="login" value="" placeholder="Email"></p>
+				<p><input type="text" name="login" value="" placeholder="Email" autocomplete="off"></p>
 				<p><input type="password" name="password" value="" placeholder="Password"></p>
 				<label><a href="../Registreren_pagina/Register_page.php"><font size="2">Don't have an account yet ? Register here!</font></a></label>
 				<input class="button special" type="submit" value="login">

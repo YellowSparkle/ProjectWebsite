@@ -1,8 +1,8 @@
 <?php
 class DBController {
-	private $host = "yellowsparkle.sentientturtle.me";
-	private $user = "Joost";
-	private $password = "Project";
+	private $host = "localhost";
+	private $user = "root";
+	private $password = "";
 	private $database = "projectdb";
 	
 	function __construct() {
